@@ -1,6 +1,6 @@
 --- 
 title: "My Book"
-author: "Yihui Xie"
+author: "Mark Lee"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
