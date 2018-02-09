@@ -17,12 +17,12 @@ From here <http://www.littlewebhut.com/articles/html_iframe_example/>
 <a href="images/eightball.gif" target="imgbox">Eight Ball</a>
 
 ## Video
-```{r}
+```{r echo=FALSE}
 knitr::include_url("http://www.youtube.com/embed/9bZkp7q19f0?rel=0")
 ```
 
 ## Raster graphics
-```{r}
+```{r echo=FALSE}
 #install.packages("png")
 library("png")
 ball <- readPNG("images/squirrel.png", native = TRUE)

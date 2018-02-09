@@ -155,17 +155,11 @@ iframes are not supported by your browser.
 </div>
 <div id="video" class="section level2">
 <h2><span class="header-section-number">4.2</span> Video</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">knitr<span class="op">::</span><span class="kw">include_url</span>(<span class="st">&quot;http://www.youtube.com/embed/9bZkp7q19f0?rel=0&quot;</span>)</code></pre></div>
 <iframe src="http://www.youtube.com/embed/9bZkp7q19f0?rel=0" width="672" height="400px">
 </iframe>
 </div>
 <div id="raster-graphics" class="section level2">
 <h2><span class="header-section-number">4.3</span> Raster graphics</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#install.packages(&quot;png&quot;)</span>
-<span class="kw">library</span>(<span class="st">&quot;png&quot;</span>)
-ball &lt;-<span class="st"> </span><span class="kw">readPNG</span>(<span class="st">&quot;images/squirrel.png&quot;</span>, <span class="dt">native =</span> <span class="ot">TRUE</span>)
-<span class="kw">plot</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">1</span>, <span class="dv">0</span><span class="op">:</span><span class="dv">1</span>, <span class="dt">type =</span> <span class="st">&quot;n&quot;</span>, <span class="dt">ann =</span> <span class="ot">FALSE</span>, <span class="dt">axes =</span> <span class="ot">FALSE</span>)
-<span class="kw">rasterImage</span>(ball, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>)</code></pre></div>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <ul>
 <li>Turn off alarm</li>
