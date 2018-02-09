@@ -18,7 +18,7 @@ From here <http://www.littlewebhut.com/articles/html_iframe_example/>
 
 ## Video
 ```{r echo=FALSE}
-knitr::include_url("http://www.youtube.com/embed/9bZkp7q19f0?rel=0")
+knitr::include_url("https://www.youtube.com/embed/9bZkp7q19f0?rel=0")
 ```
 
 ## Raster graphics
