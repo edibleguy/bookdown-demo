@@ -21,15 +21,17 @@ From here <http://www.littlewebhut.com/articles/html_iframe_example/>
 knitr::include_url("https://www.youtube.com/embed/9bZkp7q19f0?rel=0")
 ```
 
-## Raster graphics
-```{r echo=FALSE}
-#install.packages("png")
-library("png")
-ball <- readPNG("images/squirrel.png", native = TRUE)
-plot(0:1, 0:1, type = "n", ann = FALSE, axes = FALSE)
-rasterImage(ball, 0, 0, 1, 1)
-```
 
+
+```{r echo=FALSE}
+#Raster graphics n- won't install in linux mint
+#install.packages("png")
+#library("png")
+#ball <- readPNG("images/squirrel.png", native = TRUE)
+#plot(0:1, 0:1, type = "n", ann = FALSE, axes = FALSE)
+#rasterImage(ball, 0, 0, 1, 1)
+```
+-->
 
 - Turn off alarm
 - Get out of bed
