@@ -6,4 +6,4 @@ From pc A.
 
 From pc B.
 
-Got the bib files in sync. I used fetch and hard reset.
+Got the bib files in sync. I copied the lines from the github copied and edited the local copy with them.
