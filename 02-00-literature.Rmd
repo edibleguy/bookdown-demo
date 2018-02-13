@@ -5,3 +5,5 @@ Table of apples goes here. ok.
 From pc A.
 
 From pc B.
+
+Got the bib files in sync. I used fetch and hard reset.
