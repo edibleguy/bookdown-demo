@@ -7,14 +7,8 @@ From pc A.
 From pc B.
 
 Got the bib files in sync. I copied the lines from the github copied and edited the local copy with them.
-<style>
-img {
-  width:25%
-  height: auto
-}
-</style>
-<img src="images/grapes.jpg" width="480" height="640">
 
-<iframe frameborder="0" scrolling="no" width="320" height="480" src="images/grapes.jpg" name="imgbox" id="imgbox2">
-   <p>iframes are not supported by your browser.</p>
-</iframe><br />
+<img src="images/grapes.jpg" width=75% height=auto>
+
+<h1 style="font-size:10vw">Hello World</h1>
+

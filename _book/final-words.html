@@ -149,6 +149,129 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="final-words" class="section level1">
 <h1><span class="header-section-number">Chapter 6</span> Final Words</h1>
 <p>We have finished a nice book.</p>
+<h2 class="w3-center">
+Manual Slideshow
+</h2>
+<style>
+.w3-display-left{position:top:0%;left:0%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
+.w3-display-right{position:top:0%;right:0%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%)}
+.w3-black,.w3-hover-black:hover{color:#fff!important;background-color:#000!important}
+.w3-button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
+</style>
+<div class="w3-content w3-display-container">
+<h2>
+click to show next picture
+</h2>
+<button class="w3-button w3-black w3-display-left" style="width:10%" onclick="plusDivs(-1)">
+❮
+</button>
+<button class="w3-button w3-black w3-display-right" style="width:10%" onclick="plusDivs(1)">
+❯
+</button>
+<p><img class="mySlides" src="images/grapes.jpg" style="width:100%"> <img class="mySlides" src="images/spaghetti.jpg" style="width:100%"> <img class="mySlides" src="images/squirrel.png" style="width:100%"> <img class="mySlides" src="images/eightball.gif" style="width:100%"></p>
+</div>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+<style>
+.mySlides {display:none}
+</style>
+<body>
+<div class="w3-container">
+<h2>
+W3.CSS Lightbox
+</h2>
+<p>
+In this example we combine JavaScript from Slideshows and Modals to create a Lightbox (Modal Image Gallery):
+</p>
+<div class="w3-col s4">
+<pre><code>&lt;img src=&quot;images/grapes.jpg&quot; style=&quot;width:100%;cursor:pointer&quot;
+onclick=&quot;openModal();currentDiv(1)&quot; class=&quot;w3-hover-shadow&quot;&gt;</code></pre>
+</div>
+<div id="myModal" class="w3-modal w3-black">
+<span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright" onclick="closeModal()" style="cursor:pointer">×</span>
+<div class="w3-modal-content">
+<div class="w3-content" style="max-width:1200px">
+<img class="mySlides" src="images/grapes.jpg" style="width:100%"> <img class="mySlides" src="images/spaghetti.jpg" style="width:100%"> <img class="mySlides" src="images/squirrel.png" style="width:100%">
+<div class="w3-row w3-black w3-center">
+<pre><code>&lt;div class=&quot;w3-display-container&quot;&gt;
+ &lt;p id=&quot;caption&quot;&gt;&lt;/p&gt;
+ &lt;span class=&quot;w3-display-left w3-btn&quot; onclick=&quot;plusDivs(-1)&quot;&gt;❮&lt;/span&gt;
+ &lt;span class=&quot;w3-display-right w3-btn&quot; onclick=&quot;plusDivs(1)&quot;&gt;❯&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;w3-col s4&quot;&gt;
+ &lt;img class=&quot;demo w3-opacity w3-hover-opacity-off&quot; src=&quot;images/grapes.jpg&quot; style=&quot;width:100%&quot; onclick=&quot;currentDiv(1)&quot; alt=&quot;Nature and sunrise&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;w3-col s4&quot;&gt;
+ &lt;img class=&quot;demo w3-opacity w3-hover-opacity-off&quot; src=&quot;images/spaghetti.jpg&quot; style=&quot;width:100%&quot; onclick=&quot;currentDiv(2)&quot; alt=&quot;Trolltunga, Norway&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;w3-col s4&quot;&gt;
+ &lt;img class=&quot;demo w3-opacity w3-hover-opacity-off&quot; src=&quot;images/squirrel.png&quot; style=&quot;width:100%&quot; onclick=&quot;currentDiv(3)&quot; alt=&quot;Mountains and fjords&quot;&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<!-- End row -->
+</div>
+<p><!-- End w3-content --></p>
+</div>
+<p><!-- End modal content --></p>
+</div>
+<p><!-- End modal --></p>
+</div>
+<script>
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
 
 </div>
             </section>
