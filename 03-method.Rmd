@@ -2,10 +2,6 @@
 
 We describe our methods in this chapter.
 
-
-
-
-
 ## Gallery via links
 From here <http://www.littlewebhut.com/articles/html_iframe_example/>
 
