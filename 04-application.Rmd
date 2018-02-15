@@ -1,7 +1,28 @@
 # Applications
 
-Some _significant_ applications are demonstrated in this chapter.
+Here are some tests.
 
-## Example one
+<style>
+#image{
+border:4px #666 solid;
+height:auto;
+width:640px;}
+</style>
 
-## Example two
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<img id="image" src="images/grapes.jpg" border="0"/>
+
+<img src="images/grapes.jpg" class="thumb" width='100px' height=auto/>
+<img src="images/spaghetti.jpg" class="thumb" width='100px' height=auto/>
+<img src="images/squirrel.png"" class="thumb" width='100px' height=auto />
+    <script type="text/javascript">
+        $(document).ready(function(){
+	$(".thumb").click(function() {
+		var dir = $(this).attr("src");
+		$('#image').hide();
+		$('#image').fadeIn('fast');
+		$('#image').attr("src",dir);
+	});
+});
+</script>
