@@ -147,79 +147,34 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="testing" class="section level1">
 <h1><span class="header-section-number">Chapter 7</span> Testing</h1>
 <p>test</p>
-<style>
-
-
-
-.lightbox {
-
-    position:fixed;
-
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    height:100%;
-
-    background:rgba(0, 0, 0, .8);
-
-}
-
-
-
-.lightbox_table {
-
-    width:100%;
-
-    height:100%;
-
-}
-
-
-
-.lightbox_table_cell {
-
-    vertical-align:middle;
-
-}
-
-
-
-</style>
-<button onclick="document.getElementById('lightbox').style.display='inline';">
-<p>Show lightbox</p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#div1").fadeToggle();
+        $("#div2").fadeToggle("slow");
+        $("#div3").fadeToggle(3000);
+    });
+});
+</script>
+<p>
+Demonstrate fadeToggle() with different speed parameters.
+</p>
+<button>
+Click to fade in/out boxes
 </button>
-<!-- LIGHTBOX CODE BEGIN -->
-<div id="lightbox" class="lightbox" style="display:none" onclick="document.getElementById(&#39;lightbox&#39;).style.display=&#39;none&#39;;">
-<table class="lightbox_table">
-<tr>
-<td class="lightbox_table_cell" align="center">
-<pre><code>  &lt;div id=&quot;lightbox_content&quot; style=
+<p><br><br></p>
+<div id="div1" style="width:80px;height:80px;background-color:red;">
 
-        &quot;width:300px; background-color:white; border:5px solid black;&quot;&gt;
-
-
-
-  &lt;img src=&quot;images/grapes.jpg&quot; /&gt;
-
-
-
-     &lt;p&gt;Click anywhere to close the lightbox.&lt;/p&gt;
-
-     &lt;p&gt;Use Javascript to insert anything here.&lt;/p&gt;
-
-
-
-  &lt;/div&gt;</code></pre>
-</td>
-</tr>
-</table>
 </div>
-<!-- LIGHTBOX CODE END -->
-</body>
-</html>
+<br>
+<div id="div2" style="width:80px;height:80px;background-color:green;">
+
+</div>
+<br>
+<div id="div3" style="width:80px;height:80px;background-color:blue;">
+
+</div>
 
 </div>
             </section>
