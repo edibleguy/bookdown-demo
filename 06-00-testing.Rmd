@@ -1,6 +1,6 @@
 # Testing
 
-test
+jquery is part of gitbook, so you don't need to load it.
 
 
 
@@ -8,8 +8,6 @@ test
 
 
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
     $("button").click(function(){
@@ -31,28 +29,3 @@ $(document).ready(function(){
 <br>
 <div id="div3" style="width:80px;height:80px;background-color:blue;"></div>
 
-
-lightbox from http://lokeshdhakar.com/projects/lightbox2/
-<link href="lightbox2-master\src\css\lightbox.css" rel="stylesheet">
-<script src="lightbox2-master\src\js\lightbox.js"></script>
-<a href="images/grapes.jpg" data-lightbox="image-1" data-title="My caption">Image #1</a>
-<a href="images/spaghetti.jpg" data-lightbox="roadtrip">Image #2</a>
-<a href="images/grapes.jpg" data-lightbox="roadtrip">Image #3</a>
-<a href="images/spaghetti.jpg" data-lightbox="roadtrip">Image #4</a>
-
-
-      <section id="examples" class="examples-section">
-        <div class="container">
-
-          <h2>Examples</h2>
-          <h3 style="clear: both;">Four image set</h3>
-          <div class="image-row">
-            <div class="image-set">
-              <a class="example-image-link" href="images/grapes.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/grapes.jpg" alt="Golden Gate Bridge with San Francisco in distance"></a>
-              <a class="example-image-link" href="images/spaghetti.jpg" data-lightbox="example-set" data-title="Or press the right arrow on your keyboard."><img class="example-image" src="images/spaghetti.jpg" alt="Forest with mountains behind"></a>
-              <a class="example-image-link" href="images/image-5.jpg" data-lightbox="example-set" data-title="The next image in the set is preloaded as you&apos;re viewing."><img class="example-image" src="images/thumb-5.jpg" alt="Bicyclist looking out over hill at ocean"></a>
-              <a class="example-image-link" href="images/image-6.jpg" data-lightbox="example-set" data-title="Click anywhere outside the image or the X to the right to close."><img class="example-image" src="images/thumb-6.jpg" alt="Small lighthouse at bottom with ocean behind"></a>
-            </div>
-          </div>
-        </div>
-      </section>
