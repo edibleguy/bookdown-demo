@@ -10,7 +10,7 @@ width:640px;}
 
 
 
-<img id="image" src="images/grapes.jpg" border="0"/>
+<img src="images/grapes.jpg" />
 
 <script src="featherlight.js" type="text/javascript" charset="utf-8"></script>
 <script src="featherlight.gallery.js" type="text/javascript" charset="utf-8"></script>
