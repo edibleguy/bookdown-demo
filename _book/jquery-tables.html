@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="intro.html">
-<link rel="next" href="fuji-apple.html">
+<link rel="prev" href="references.html">
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -125,7 +125,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="7" data-path="testing.html"><a href="testing.html"><i class="fa fa-check"></i><b>7</b> Testing</a></li>
 <li class="chapter" data-level="8" data-path="testing-2.html"><a href="testing-2.html"><i class="fa fa-check"></i><b>8</b> Testing 2</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="9" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i><b>9</b> Tables</a></li>
+<li class="chapter" data-level="9" data-path="jquery-tables.html"><a href="jquery-tables.html"><i class="fa fa-check"></i><b>9</b> Jquery Tables</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -146,25 +146,120 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="apples" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> Apples</h1>
-<p>Table of apples goes here. ok.</p>
-<p>From pc A.</p>
-<p>From pc B.</p>
-<p>Got the bib files in sync. I copied the lines from the github copied and edited the local copy with them.</p>
-<p><img src="images/grapes.jpg" width=75% height=auto></p>
-<h1 style="font-size:10vw">
-Hello World
-</h1>
-<!--chapter:end:02-00-literature.Rmd--> 
+<div id="jquery-tables" class="section level1">
+<h1><span class="header-section-number">Chapter 9</span> Jquery Tables</h1>
+<p>table goes here.</p>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+<p><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name"></p>
+<table id="myTable">
+<tr class="header">
+<pre><code>&lt;th style=&quot;width:60%;&quot;&gt;Name&lt;/th&gt;
+&lt;th style=&quot;width:40%;&quot;&gt;Country&lt;/th&gt;</code></pre>
+</tr>
+<tr>
+<pre><code>&lt;td&gt;Alfreds Futterkiste&lt;/td&gt;
+&lt;td&gt;Germany&lt;/td&gt;</code></pre>
+</tr>
+<tr>
+<pre><code>&lt;td&gt;Berglunds snabbkop&lt;/td&gt;
+&lt;td&gt;Sweden&lt;/td&gt;</code></pre>
+</tr>
+<tr>
+<pre><code>&lt;td&gt;Island Trading&lt;/td&gt;
+&lt;td&gt;UK&lt;/td&gt;</code></pre>
+</tr>
+<tr>
+<pre><code>&lt;td&gt;Koniglich Essen&lt;/td&gt;
+&lt;td&gt;Germany&lt;/td&gt;</code></pre>
+</tr>
+<tr>
+<pre><code>&lt;td&gt;Laughing Bacchus Winecellars&lt;/td&gt;
+&lt;td&gt;Canada&lt;/td&gt;</code></pre>
+</tr>
+<tr>
+<pre><code>&lt;td&gt;Magazzini Alimentari Riuniti&lt;/td&gt;
+&lt;td&gt;Italy&lt;/td&gt;</code></pre>
+</tr>
+<tr>
+<pre><code>&lt;td&gt;North/South&lt;/td&gt;
+&lt;td&gt;UK&lt;/td&gt;</code></pre>
+</tr>
+<tr>
+<pre><code>&lt;td&gt;Paris specialites&lt;/td&gt;
+&lt;td&gt;France&lt;/td&gt;</code></pre>
+</tr>
+</table>
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+<div id="refs" class="references">
+<div>
+<p>Xie, Yihui. 2015. <em>Dynamic Documents with R and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.name/knitr/" class="uri">http://yihui.name/knitr/</a>.</p>
+</div>
+<div>
+<p>———. 2018. <em>Bookdown: Authoring Books and Technical Documents with R Markdown</em>. <a href="https://github.com/rstudio/bookdown" class="uri">https://github.com/rstudio/bookdown</a>.</p>
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="fuji-apple.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="references.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
