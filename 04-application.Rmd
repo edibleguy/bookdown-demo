@@ -10,7 +10,7 @@ width:640px;}
 </style>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 <img id="image" src="images/grapes.jpg" border="0"/>
 
 <img src="images/grapes.jpg" class="thumb" width='100px' height=auto/>
