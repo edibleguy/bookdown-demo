@@ -1,7 +1,16 @@
 # Testing 2
 
 More jquery
+<style>
+#image{
+border:4px #666 solid;
+height:auto;
+width:640px;}
+</style>
 
+
+
+<img id="image" src="images/grapes.jpg" border="0"/>
 
 <script src="featherlight.js" type="text/javascript" charset="utf-8"></script>
 <script src="featherlight.gallery.js" type="text/javascript" charset="utf-8"></script>
