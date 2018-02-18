@@ -2,17 +2,69 @@
 
 table goes here.
 
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+<h2>Apples</h2>
 <table>
 <tr>
 <td>
-a test
+<a href="fuji-apple.html">Fuji</a>
 </td>
+</tr>
+<tr>
 <td>
-goes here
-</td>
-<td>
-<a href="fuji-apple.html">fuji apple</a>
+<a href="williams-pride-apple.html">Willams Pride apple</a>
 </td>
 </tr>
 </table>
 
+<h2>Two Columns</h2>
+<table>
+<tr>
+<td>
+Malus domestica
+</td>
+<td>
+<a href="fuji-apple.html">Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+Malus domestica
+</td>
+<td>
+<a href="williams-pride-apple.html">Willams Pride apple</a>
+</td>
+</tr>
+</table>
+
+<h2>Sort Testing</h2>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+<style>
+#myInput {
+    background-image: url('images/searchicon.png'); /* Add a search icon to input */
+    background-position: 0px 0px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+</style>
