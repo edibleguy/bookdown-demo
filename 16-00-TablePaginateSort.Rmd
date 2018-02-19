@@ -119,7 +119,7 @@
 <script>
 $("#example").simplePagination({
 // the number of rows to show per page
-perPage: 9,
+perPage: 15,
 // CSS classes to custom the pagination
 containerClass: '',
 previousButtonClass: '',
