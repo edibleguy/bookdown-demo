@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="final-words.html">
-<link rel="next" href="testing-2.html">
+<link rel="prev" href="paged-tables.html">
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -124,12 +124,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="6" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>6</b> Final Words</a></li>
 <li class="chapter" data-level="7" data-path="testing.html"><a href="testing.html"><i class="fa fa-check"></i><b>7</b> Testing</a></li>
 <li class="chapter" data-level="8" data-path="testing-2.html"><a href="testing-2.html"><i class="fa fa-check"></i><b>8</b> Testing 2</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="chapter" data-level="9" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i><b>9</b> Tables</a></li>
 <li class="chapter" data-level="10" data-path="paged-tables.html"><a href="paged-tables.html"><i class="fa fa-check"></i><b>10</b> paged tables</a></li>
-<li class="chapter" data-level="11" data-path="filter-list.html"><a href="filter-list.html"><i class="fa fa-check"></i><b>11</b> filter list</a></li>
-<li class="chapter" data-level="12" data-path="slide-show.html"><a href="slide-show.html"><i class="fa fa-check"></i><b>12</b> slide show</a></li>
-<li class="chapter" data-level="13" data-path="include-html.html"><a href="include-html.html"><i class="fa fa-check"></i><b>13</b> include html</a></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="11" data-path="paged-tables-1.html"><a href="paged-tables-1.html"><i class="fa fa-check"></i><b>11</b> paged tables</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -150,86 +148,406 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="testing" class="section level1">
-<h1><span class="header-section-number">Chapter 7</span> Testing</h1>
-<p>jquery is part of gitbook, so you don’t need to load it.</p>
-<script> 
-$(document).ready(function(){
-    $("#flip").click(function(){
-        $("#panel").slideToggle("slow");
-    });
-});
-</script>
-<style> 
-#panel, #flip {
-    padding: 5px;
-    text-align: center;
-    background-color: #e5eecc;
-    border: solid 1px #c3c3c3;
-}
-
-#panel {
-    padding: 50px;
-    display: none;
-}
-</style>
-<div id="flip">
-Click to slide the panel down or up
-</div>
-<div id="panel">
-Hello world!
-</div>
-<script>
-$(document).ready(function(){
-    $("button").click(function(){
-        var txt = "";
-        txt += "Width of div: " + $("#div1").width() + "</br>";
-        txt += "Height of div: " + $("#div1").height();
-        $("#div1").html(txt);
-    });
-});
-</script>
-<p><input type="text" id="txtval" /> <input type="button" value="Get textbox Value" id="btnval" /></p>
-<script>
-$(document).ready(function(){
-        $('#btnval').click(function(){
-            $val=$('#txtval').val();
-            alert($val);
-        });
-    });
-</script>
+<div id="paged-tables-1" class="section level1">
+<h1><span class="header-section-number">Chapter 11</span> paged tables</h1>
+<h2>
+Paginated Table
+</h2>
 <style>
-#div1 {
-    height: 100px;
-    width: 300px;
-    padding: 10px;
-    margin: 3px;
-    border: 1px solid blue;
-    background-color: lightblue;
+    table {
+    width: 40em;
+    margin: 2em auto;
+}
+
+
+td {
+    width: 10em;
+    padding: 0.3em;
+}
+
+tbody {
+    background: #ccc;
+}
+
+div.pager {
+    text-align: center;
+    margin: 1em 0;
+}
+
+div.pager span {
+    display: inline-block;
+    width: 1.8em;
+    height: 1.8em;
+    line-height: 1.8;
+    text-align: center;
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+    margin-right: 0.5em;
+}
+
+div.pager span.active {
+    background: #c00;
+}
+
+
+*, body, button, input, textarea, select {
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+  margin:0;
+  padding:0;
+}
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+fieldset,img {
+  border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+  font-style:normal;
+  font-weight:normal;
+}
+ol,ul {
+  list-style:none;
+}
+caption,th {
+  text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-size:100%;
+  font-weight:normal;
+}
+q:before,q:after {
+  content:'';
+}
+abbr,acronym { border:0;}
+
+
+body {
+  background: #fff;
 }
 </style>
-<div id="div1">
+<table class="paginated">
+<thead background: #000; color: #fff>
+<tr>
+<th scope="col">
+A
+</th>
+<th scope="col">
+B
+</th>
+<th scope="col">
+C
+</th>
+<th scope="col">
+D
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+1
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+</tr>
+<tr>
+<td>
+51
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+</tr>
+<tr>
+<td>
+61
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+</tr>
+<tr>
+<td>
+71
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+</tr>
+<tr>
+<td>
+81
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+</tr>
+<tr>
+<td>
+91
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+</tr>
+<tr>
+<td>
+111
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+</tr>
+<tr>
+<td>
+121
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+</tr>
+<tr>
+<td>
+131
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+</tr>
+<tr>
+<td>
+141
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+</tr>
+<tr>
+<td>
+151
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+</tr>
+<tr>
+<td>
+161
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+</tr>
+<tr>
+<td>
+171
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+</tr>
+<tr>
+<td>
+181
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+</tr>
+<tr>
+<td>
+191
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+</tr>
+</tbody>
+</table>
 
+<div id="refs" class="references">
+<div>
+<p>Xie, Yihui. 2015. <em>Dynamic Documents with R and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.name/knitr/" class="uri">http://yihui.name/knitr/</a>.</p>
 </div>
-<p><br></p>
-<button>
-Display dimensions of div
-</button>
-<p>
-width() - returns the width of an element.
-</p>
-<p>
-height() - returns the height of an element.
-</p>
-
+<div>
+<p>———. 2018. <em>Bookdown: Authoring Books and Technical Documents with R Markdown</em>. <a href="https://github.com/rstudio/bookdown" class="uri">https://github.com/rstudio/bookdown</a>.</p>
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="final-words.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="testing-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="paged-tables.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

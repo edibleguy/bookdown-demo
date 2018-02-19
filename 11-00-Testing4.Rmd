@@ -1,0 +1,41 @@
+# filter list
+<h2> filter list</h2>
+
+<style>
+#myInput {
+    background-image: url('images/searchicon.png'); /* Add a search icon to input */
+    background-position: 0px 0px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+</style>
+
+<script src="libs/w3.js"></script>
+
+<p>Search for a name in the input field:</p>
+
+<input id="myInput" oninput="w3.filterHTML('#id01', 'li', this.value)" placeholder="Search for names..">
+
+<ul id="id01">
+  <li><a href="fuji-apple.html">Fuji</a></li>
+  <li><a href="williams-pride-apple.html">Willams Pride</a></li>
+  <li>Centro comercial Moctezuma</li>
+  <li>Ernst Handel</li>
+  <li>FISSA Fabrica Inter. Salchichas S.A.</li>
+  <li>Galería del gastrónomo</li>
+  <li>Island Trading</li>
+  <li>Königlich Essen</li>
+  <li>Laughing Bacchus Wine Cellars</li>
+  <li>Magazzini Alimentari Riuniti</li>
+  <li>North/South</li>
+  <li>Paris spécialités</li>
+  <li>Rattlesnake Canyon Grocery</li>
+  <li>Simons bistro</li>
+  <li>The Big Cheese</li>
+  <li>Vaffeljernet</li>
+  <li>Wolski Zajazd</li>
+</ul>

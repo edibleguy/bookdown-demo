@@ -1,0 +1,17 @@
+# include html
+<script src="libs/w3.js"></script>
+
+<div w3-include-html="header1.html"></div> 
+
+<h2> filter list from file</h2>
+
+<input id="myInput" oninput="w3.filterHTML('#id01', 'li', this.value)" placeholder="Enter search here..">
+
+<ul id="id01">
+<div w3-include-html="testcontent2.html"></div> 
+</ul>
+
+
+<script>
+w3.includeHTML();
+</script>

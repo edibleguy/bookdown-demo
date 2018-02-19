@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="final-words.html">
-<link rel="next" href="testing-2.html">
+<link rel="prev" href="slide-show.html">
+<link rel="next" href="references.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -150,77 +150,24 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="testing" class="section level1">
-<h1><span class="header-section-number">Chapter 7</span> Testing</h1>
-<p>jquery is part of gitbook, so you don’t need to load it.</p>
-<script> 
-$(document).ready(function(){
-    $("#flip").click(function(){
-        $("#panel").slideToggle("slow");
-    });
-});
-</script>
-<style> 
-#panel, #flip {
-    padding: 5px;
-    text-align: center;
-    background-color: #e5eecc;
-    border: solid 1px #c3c3c3;
-}
-
-#panel {
-    padding: 50px;
-    display: none;
-}
-</style>
-<div id="flip">
-Click to slide the panel down or up
-</div>
-<div id="panel">
-Hello world!
-</div>
-<script>
-$(document).ready(function(){
-    $("button").click(function(){
-        var txt = "";
-        txt += "Width of div: " + $("#div1").width() + "</br>";
-        txt += "Height of div: " + $("#div1").height();
-        $("#div1").html(txt);
-    });
-});
-</script>
-<p><input type="text" id="txtval" /> <input type="button" value="Get textbox Value" id="btnval" /></p>
-<script>
-$(document).ready(function(){
-        $('#btnval').click(function(){
-            $val=$('#txtval').val();
-            alert($val);
-        });
-    });
-</script>
-<style>
-#div1 {
-    height: 100px;
-    width: 300px;
-    padding: 10px;
-    margin: 3px;
-    border: 1px solid blue;
-    background-color: lightblue;
-}
-</style>
-<div id="div1">
+<div id="include-html" class="section level1">
+<h1><span class="header-section-number">Chapter 13</span> include html</h1>
+<script src="libs/w3.js"></script>
+<div w3-include-html="header1.html">
 
 </div>
-<p><br></p>
-<button>
-Display dimensions of div
-</button>
-<p>
-width() - returns the width of an element.
-</p>
-<p>
-height() - returns the height of an element.
-</p>
+<h2>
+filter list from file
+</h2>
+<p><input id="myInput" oninput="w3.filterHTML('#id01', 'li', this.value)" placeholder="Enter search here.."></p>
+<ul id="id01">
+<div w3-include-html="testcontent2.html">
+
+</div>
+</ul>
+<script>
+w3.includeHTML();
+</script>
 
 </div>
             </section>
@@ -228,8 +175,8 @@ height() - returns the height of an element.
           </div>
         </div>
       </div>
-<a href="final-words.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="testing-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="slide-show.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

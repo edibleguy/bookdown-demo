@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="final-words.html">
-<link rel="next" href="testing-2.html">
+<link rel="prev" href="paged-tables.html">
+<link rel="next" href="slide-show.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -150,77 +150,81 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="testing" class="section level1">
-<h1><span class="header-section-number">Chapter 7</span> Testing</h1>
-<p>jquery is part of gitbook, so you don’t need to load it.</p>
-<script> 
-$(document).ready(function(){
-    $("#flip").click(function(){
-        $("#panel").slideToggle("slow");
-    });
-});
-</script>
-<style> 
-#panel, #flip {
-    padding: 5px;
-    text-align: center;
-    background-color: #e5eecc;
-    border: solid 1px #c3c3c3;
-}
-
-#panel {
-    padding: 50px;
-    display: none;
-}
-</style>
-<div id="flip">
-Click to slide the panel down or up
-</div>
-<div id="panel">
-Hello world!
-</div>
-<script>
-$(document).ready(function(){
-    $("button").click(function(){
-        var txt = "";
-        txt += "Width of div: " + $("#div1").width() + "</br>";
-        txt += "Height of div: " + $("#div1").height();
-        $("#div1").html(txt);
-    });
-});
-</script>
-<p><input type="text" id="txtval" /> <input type="button" value="Get textbox Value" id="btnval" /></p>
-<script>
-$(document).ready(function(){
-        $('#btnval').click(function(){
-            $val=$('#txtval').val();
-            alert($val);
-        });
-    });
-</script>
+<div id="filter-list" class="section level1">
+<h1><span class="header-section-number">Chapter 11</span> filter list</h1>
+<h2>
+filter list
+</h2>
 <style>
-#div1 {
-    height: 100px;
-    width: 300px;
-    padding: 10px;
-    margin: 3px;
-    border: 1px solid blue;
-    background-color: lightblue;
+#myInput {
+    background-image: url('images/searchicon.png'); /* Add a search icon to input */
+    background-position: 0px 0px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
 }
 </style>
-<div id="div1">
-
-</div>
-<p><br></p>
-<button>
-Display dimensions of div
-</button>
+<script src="libs/w3.js"></script>
 <p>
-width() - returns the width of an element.
+Search for a name in the input field:
 </p>
-<p>
-height() - returns the height of an element.
-</p>
+<p><input id="myInput" oninput="w3.filterHTML('#id01', 'li', this.value)" placeholder="Search for names.."></p>
+<ul id="id01">
+<li>
+<a href="fuji-apple.html">Fuji</a>
+</li>
+<li>
+<a href="williams-pride-apple.html">Willams Pride</a>
+</li>
+<li>
+Centro comercial Moctezuma
+</li>
+<li>
+Ernst Handel
+</li>
+<li>
+FISSA Fabrica Inter. Salchichas S.A.
+</li>
+<li>
+Galería del gastrónomo
+</li>
+<li>
+Island Trading
+</li>
+<li>
+Königlich Essen
+</li>
+<li>
+Laughing Bacchus Wine Cellars
+</li>
+<li>
+Magazzini Alimentari Riuniti
+</li>
+<li>
+North/South
+</li>
+<li>
+Paris spécialités
+</li>
+<li>
+Rattlesnake Canyon Grocery
+</li>
+<li>
+Simons bistro
+</li>
+<li>
+The Big Cheese
+</li>
+<li>
+Vaffeljernet
+</li>
+<li>
+Wolski Zajazd
+</li>
+</ul>
 
 </div>
             </section>
@@ -228,8 +232,8 @@ height() - returns the height of an element.
           </div>
         </div>
       </div>
-<a href="final-words.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="testing-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="paged-tables.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="slide-show.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
