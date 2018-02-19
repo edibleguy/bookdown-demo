@@ -1,0 +1,130 @@
+# table paginate
+<script src="libs/jquery-paginate.js"></script>
+
+<style>
+.page-navigation a {
+      margin: 0 2px;
+      display: inline-block;
+      padding: 3px 5px;
+      color: #ffffff;
+      background-color: #70b7ec;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+.page-navigation a[data-selected] {
+    background-color: #3d9be0;
+    }
+</style>
+  
+<h2> Table Paginate</h2>
+
+<table id='myTable'>
+<tr>
+<td>
+<a href="fuji-apple.html">Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">Willams Pride apple</a>
+</td>
+</tr>
+</table>
+
+
+
+<script>
+  // Add some examples to the page
+
+
+  // Paginate it
+  $('#myTable').paginate({
+    limit: 5,
+    onSelect: function(obj, page) {
+      console.log('Page ' + page + ' selected!' );
+    }
+  });
+</script>

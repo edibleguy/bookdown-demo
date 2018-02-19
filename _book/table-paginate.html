@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="intro.html">
+<link rel="prev" href="include-html.html">
+<link rel="next" href="references.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -151,21 +151,133 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">My Book</h1>
-<h4 class="author"><em>Mark Lee</em></h4>
-<h4 class="date"><em>2018-02-19</em></h4>
-</div>
-<div id="prerequisites" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Prerequisites</h1>
-<p>This is a <em>sample</em> book written in <strong>Markdown</strong>. Use anything that Pandoc’s Markdown supports, e.g., a math equation <span class="math inline">\(a^2 + b^2 = c^2\)</span>.</p>
-<p>The <strong>bookdown</strong> package can be installed from CRAN or Github:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)
-<span class="co"># or the development version</span>
-<span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></code></pre></div>
-<p>Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
-<p>To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <a href="https://yihui.name/tinytex/" class="uri">https://yihui.name/tinytex/</a>.</p>
-<p>Added to the bottom of the page!</p>
+<div id="table-paginate" class="section level1">
+<h1><span class="header-section-number">Chapter 14</span> table paginate</h1>
+<script src="libs/jquery-paginate.js"></script>
+<style>
+.page-navigation a {
+      margin: 0 2px;
+      display: inline-block;
+      padding: 3px 5px;
+      color: #ffffff;
+      background-color: #70b7ec;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+.page-navigation a[data-selected] {
+    background-color: #3d9be0;
+    }
+</style>
+<h2>
+Table Paginate
+</h2>
+<table id='myTable'>
+<tr>
+<td>
+<a href="fuji-apple.html">Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">Willams Pride apple</a>
+</td>
+</tr>
+</table>
+<script>
+  // Add some examples to the page
+
+
+  // Paginate it
+  $('#myTable').paginate({
+    limit: 5,
+    onSelect: function(obj, page) {
+      console.log('Page ' + page + ' selected!' );
+    }
+  });
+</script>
 
 </div>
             </section>
@@ -173,8 +285,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-
-<a href="intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="include-html.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
