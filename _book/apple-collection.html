@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="slide-show.html">
-<link rel="next" href="table-paginate.html">
+<link rel="prev" href="table-paginate-with-filter.html">
+<link rel="next" href="adams-pearmain-apple.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -156,33 +156,162 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="include-html" class="section level1">
-<h1><span class="header-section-number">Chapter 13</span> include html</h1>
-<script src="libs/w3.js"></script>
-<div w3-include-html="header1.html">
-
-</div>
+<div id="apple-collection" class="section level1">
+<h1><span class="header-section-number">Chapter 17</span> Apple Collection</h1>
+<script src="libs/jquery.simplePagination.js"></script>
 <h2>
-filter list from file
+jQuery SimplePagination Plugin Demo with filter
 </h2>
-<p><input id="myInput" oninput="w3.filterHTML('#id01', 'li', this.value)" placeholder="Enter search here.."></p>
-<ul id="id01">
-<div w3-include-html="testcontent2.html">
-
-</div>
-</ul>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+<style>
+#myInput {
+    background-image: url('images/searchicon.png'); /* Add a search icon to input */
+    background-position: 0px 0px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+</style>
 <script>
-w3.includeHTML();
+$("#example").simplePagination({
+// the number of rows to show per page
+perPage: 15,
+// CSS classes to custom the pagination
+containerClass: '',
+previousButtonClass: '',
+nextButtonClass: '',
+// text for next and prev buttons
+previousButtonText: 'Previous',
+nextButtonText: 'Next',
+// initial page
+currentPage: 1
+});
 </script>
-
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("example");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+<p>Here is the list of apples.</p>
+<table id="example" class="table table-striped">
+<tr>
+<td>
+<a href="adams-pearmain-apple.html">Adams Pearmain</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">2 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">3 Gala</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">4 Honeycrisp apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">5 Macintosh</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">6 Enterprise apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">7 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">8 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">9 Frostbite</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">10 Adams Pearmain apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">11 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">12 Transparent apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">13 Red Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">14 Golden Russet apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">15 Black Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">16 Knobbed Russet apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">17 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">18 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">19 Wild Seedling</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">20 Willams Pride Seedling apple</a>
+</td>
+</tr>
+</table>
+<!--chapter:end:17-00-ApplesTop.Rmd--> 
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="slide-show.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="table-paginate.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="table-paginate-with-filter.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="adams-pearmain-apple.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

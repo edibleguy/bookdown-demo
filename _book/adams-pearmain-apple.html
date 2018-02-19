@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="slide-show.html">
-<link rel="next" href="table-paginate.html">
+<link rel="prev" href="apple-collection.html">
+<link rel="next" href="references.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -156,33 +156,141 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="include-html" class="section level1">
-<h1><span class="header-section-number">Chapter 13</span> include html</h1>
-<script src="libs/w3.js"></script>
-<div w3-include-html="header1.html">
+<div id="adams-pearmain-apple" class="section level2">
+<h2><span class="header-section-number">17.1</span> Adams Pearmain Apple</h2>
+<link type="text/css" rel="stylesheet" href="featherlight.css" /> <link type="text/css" rel="stylesheet" href="featherlight.gallery.css" />
+<style type="text/css">
+            @media all {
+                .lightbox { display: none; }
+                .fl-page h1,
+                .fl-page h3,
+                .fl-page h4 {
+                    font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+                    font-weight: 100;
+                    letter-spacing: 1px;
+                }
+                .fl-page h1 { font-size: 110px; margin-bottom: 0.5em; }
+                .fl-page h1 i { font-style: normal; color: #ddd; }
+                .fl-page h1 span { font-size: 30px; color: #333;}
+                .fl-page h3 { text-align: right; }
+                .fl-page h3 { font-size: 15px; }
+                .fl-page h4 { font-size: 2em; }
+                .fl-page .jumbotron { margin-top: 2em; }
+                .fl-page .btn-download { float: right; margin-top: -40px; }
+                .fl-page .btn-default { vertical-align: bottom; }
 
-</div>
-<h2>
-filter list from file
-</h2>
-<p><input id="myInput" oninput="w3.filterHTML('#id01', 'li', this.value)" placeholder="Enter search here.."></p>
-<ul id="id01">
-<div w3-include-html="testcontent2.html">
+                .fl-page .row { margin-top: 2em;}
 
-</div>
-</ul>
+                .fl-page .btn-lg span { font-size: 0.7em; }
+                .fl-page .footer { margin-top: 3em; color: #aaa; font-size: 0.9em;}
+                .fl-page .footer a { color: #999; text-decoration: none; margin-right: 0.75em;}
+                .fl-page .github { margin: 2em 0; }
+                .fl-page .github a { vertical-align: top; }
+
+                /* customized gallery */
+
+                .featherlight-gallery2 {
+                    background: rgba(100,100,100,0.5);
+                }
+                .featherlight-gallery2 .featherlight-content {
+                    background: #000;
+                }
+                .featherlight-gallery2 .featherlight-next:hover,
+                .featherlight-gallery2 .featherlight-previous:hover {
+                    background: rgba(0,0,0,0.5);
+                }
+                .featherlight-gallery2 .featherlight-next:hover span,
+                .featherlight-gallery2 .featherlight-previous:hover span {
+                    font-size: 25px;
+                    line-height: 25px;
+                    margin-top: -12.5px;
+                    color: #fff;
+                }
+                .featherlight-gallery2  .featherlight-close {
+                    background: transparent;
+                    color: #fff;
+                    font-size: 1.2em;
+                }
+                .featherlight-gallery2.featherlight-last-slide .featherlight-next,
+                .featherlight-gallery2.featherlight-first-slide .featherlight-previous {
+                    display: none;
+                }
+
+                /* text slide */
+                .thumbnail a { text-decoration: none; }
+                .blurb {
+                    display: inline-block;
+                    width: 150px;
+                    height: 150px;
+                }
+                .blurb h2 { text-align: center;}
+                .blurb .detail { display: none;}
+                .blurb .teaser {
+                    font-style: italic;
+                    text-align: center;
+                }
+                .featherlight .blurb {
+                    display: inline-block;
+                    width: 500px;
+                    height: 300px;
+                    color: #99f;
+                }
+                .featherlight .blurb .detail {
+                    color: #ddf;
+                    font-size: large;
+                    display: inherit;
+                }
+                .featherlight .blurb .teaser { display: none;}
+
+            }
+            @media(max-width: 768px){
+                .fl-page h1 span { display: block; }
+                .fl-page .btn-download { float: none; margin-bottom: 1em; }
+            }
+</style>
+<script src="featherlight.js" type="text/javascript" charset="utf-8"></script>
+<script src="featherlight.gallery.js" type="text/javascript" charset="utf-8"></script>
 <script>
-w3.includeHTML();
+            $(document).ready(function(){
+                $('.gallery').featherlightGallery({
+                    gallery: {
+                        fadeIn: 300,
+                        fadeOut: 300
+                    },
+                    openSpeed:    300,
+                    closeSpeed:   300
+                });
+                $('.gallery2').featherlightGallery({
+                    gallery: {
+                        next: 'next »',
+                        previous: '« previous'
+                    },
+                    variant: 'featherlight-gallery2'
+                });
+            });
+
 </script>
+<p><img src="images/AdamsPearmain.jpg" width=50% height=auto></p>
+<h2>
+Description
+</h2>
+<p>
+In 1826, Robert Adams introduced this fine English dessert apple as Norfolk Pippin. Other sources indicate this apple originated in the county of Herefordshire, England and was locally known as Hanging Pearmain. The apple known as Adams Pearmain today is a medium-sized, very conical fruit with dull crimson-red skin covered with a fine gray-brown russet coat. The creamy white flesh is crisp, tender and firm with a dry, nutty flavor. Ripens mid-late October.
+</p>
+<h2>
+Gallery
+</h2>
+<p><a class="thumbnail gallery" href="images/AdamsPearmain.jpg"><img src="images/AdamsPearmain.jpg" /></a> <a class="thumbnail gallery" href="images/AdamsPearmain2.jpg"><img src="images/AdamsPearmain2.jpg" /></a> <a class="thumbnail gallery" href="images/AdamsPearmain3.jpg"><img src="images/AdamsPearmain3.jpg" /></a></p>
 
 </div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="slide-show.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="table-paginate.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="apple-collection.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
