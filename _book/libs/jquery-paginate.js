@@ -136,7 +136,12 @@
         return this.obj.find(this.options.childrenSelector);
       },
       _totalPages: function() {
-        return Math.floor(this._totalRows() / this.options.limit);
+        if (this._totalRows()% this.options.limit >0){
+          return Math.floor(this._totalRows()/ this.options.limit)+1;
+        }
+        else {
+          return Math.floor(this._totalRows()/ this.options.limit);
+        }
       }
     };
   };

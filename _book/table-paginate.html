@@ -176,103 +176,113 @@ Table Paginate
 <table id='myTable'>
 <tr>
 <td>
-<a href="fuji-apple.html">Fuji</a>
+<a href="fuji-apple.html">1 Fuji</a>
 </td>
 </tr>
 <tr>
 <td>
-<a href="williams-pride-apple.html">Willams Pride apple</a>
+<a href="williams-pride-apple.html">2 Willams Pride apple</a>
 </td>
 <tr>
 <td>
-<a href="fuji-apple.html">Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">Fuji</a>
+<a href="fuji-apple.html">3 Fuji</a>
 </td>
 </tr>
 <tr>
 <td>
-<a href="williams-pride-apple.html">Willams Pride apple</a>
+<a href="williams-pride-apple.html">4 Willams Pride apple</a>
 </td>
 <tr>
 <td>
-<a href="fuji-apple.html">Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">Fuji</a>
+<a href="fuji-apple.html">5 Fuji</a>
 </td>
 </tr>
 <tr>
 <td>
-<a href="williams-pride-apple.html">Willams Pride apple</a>
+<a href="williams-pride-apple.html">6 Willams Pride apple</a>
 </td>
 <tr>
 <td>
-<a href="fuji-apple.html">Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">Fuji</a>
+<a href="fuji-apple.html">7 Fuji</a>
 </td>
 </tr>
 <tr>
 <td>
-<a href="williams-pride-apple.html">Willams Pride apple</a>
+<a href="williams-pride-apple.html">8 Willams Pride apple</a>
 </td>
 <tr>
 <td>
-<a href="fuji-apple.html">Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">Fuji</a>
+<a href="fuji-apple.html">9 Fuji</a>
 </td>
 </tr>
 <tr>
 <td>
-<a href="williams-pride-apple.html">Willams Pride apple</a>
+<a href="williams-pride-apple.html">10 Willams Pride apple</a>
 </td>
 <tr>
 <td>
-<a href="fuji-apple.html">Fuji</a>
+<a href="fuji-apple.html">11 Fuji</a>
 </td>
 </tr>
 <tr>
 <td>
-<a href="williams-pride-apple.html">Willams Pride apple</a>
+<a href="williams-pride-apple.html">12 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">13 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">14 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">15 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">16 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">17 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">18 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">19 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">20 Willams Pride apple</a>
 </td>
 </tr>
 </table>
 <script>
-  // Add some examples to the page
+//from here wikiti-random-stuff.gitlab.io/jquery-paginate
+  // this has a bug. if limit=6 and N=20, then only 1-18 are displayed
+  // fixed it with these lines (% is the remainder function)
+  //    _totalPages: function() {
+  //      if (this._totalRows()% this.options.limit >0){
+  //        return Math.floor(this._totalRows()/ this.options.limit)+1;
+  //      }
+  //      else {
+  //        return Math.floor(this._totalRows()/ this.options.limit);
+  //      }
+  //    }
 
 
   // Paginate it
   $('#myTable').paginate({
-    limit: 5,
+    limit: 14,
     onSelect: function(obj, page) {
       console.log('Page ' + page + ' selected!' );
     }
