@@ -1,0 +1,119 @@
+# table paginate again
+<script src="libs/jquery.simplePagination.js"></script>
+
+<style>
+
+</style>
+  
+<h2>jQuery SimplePagination Plugin Demo</h2>
+
+<table id="example" class="table table-striped">
+<tr>
+<td>
+<a href="fuji-apple.html">1 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">2 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">3 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">4 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">5 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">6 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">7 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">8 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">9 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">10 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">11 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">12 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">13 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">14 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">15 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">16 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">17 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">18 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">19 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">20 Willams Pride apple</a>
+</td>
+</tr>
+</table>
+
+
+<script>
+$("#example").simplePagination({
+// the number of rows to show per page
+perPage: 13,
+// CSS classes to custom the pagination
+containerClass: '',
+previousButtonClass: '',
+nextButtonClass: '',
+// text for next and prev buttons
+previousButtonText: 'Previous',
+nextButtonText: 'Next',
+// initial page
+currentPage: 1
+});
+</script>

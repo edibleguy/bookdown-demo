@@ -1,0 +1,154 @@
+# table paginate with filter
+<script src="libs/jquery.simplePagination.js"></script>
+
+
+<h2>jQuery SimplePagination Plugin Demo with filter</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+<style>
+#myInput {
+    background-image: url('images/searchicon.png'); /* Add a search icon to input */
+    background-position: 0px 0px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+</style>
+
+
+
+
+<table id="example" class="table table-striped">
+<tr>
+<td>
+<a href="fuji-apple.html">1 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">2 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">3 Gala</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">4 Honeycrisp apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">5 Macintosh</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">6 Enterprise apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">7 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">8 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">9 Frostbite</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">10 Adams Pearmain apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">11 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">12 Transparent apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">13 Red Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">14 Golden Russet apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">15 Black Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">16 Knobbed Russet apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">17 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">18 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">19 Wild Seedling</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">20 Willams Pride Seedling apple</a>
+</td>
+</tr>
+</table>
+
+
+<script>
+$("#example").simplePagination({
+// the number of rows to show per page
+perPage: 9,
+// CSS classes to custom the pagination
+containerClass: '',
+previousButtonClass: '',
+nextButtonClass: '',
+// text for next and prev buttons
+previousButtonText: 'Previous',
+nextButtonText: 'Next',
+// initial page
+currentPage: 1
+});
+</script>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("example");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+  

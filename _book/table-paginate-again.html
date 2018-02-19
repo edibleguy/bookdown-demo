@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="applications.html">
-<link rel="next" href="testing.html">
+<link rel="prev" href="table-paginate.html">
+<link rel="next" href="table-paginate-with-filter.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -153,176 +153,122 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="final-words" class="section level1">
-<h1><span class="header-section-number">Chapter 6</span> Final Words</h1>
-<p>We have finished a nice book.</p>
-<h2 class="w3-center">
-Manual Slideshow
-</h2>
+<div id="table-paginate-again" class="section level1">
+<h1><span class="header-section-number">Chapter 15</span> table paginate again</h1>
+<script src="libs/jquery.simplePagination.js"></script>
 <style>
-.w3-display-left{position:top:0%;left:0%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
-.w3-display-right{position:top:0%;right:0%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%)}
-.w3-black,.w3-hover-black:hover{color:#fff!important;background-color:#000!important}
-.w3-button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
-</style>
-<div class="w3-content w3-display-container">
-<h2>
-click to show next picture
-</h2>
-<button class="w3-button w3-black w3-display-left" style="width:10%" onclick="plusDivs(-1)">
-❮
-</button>
-<button class="w3-button w3-black w3-display-right" style="width:10%" onclick="plusDivs(1)">
-❯
-</button>
-<p><img class="mySlides" src="images/grapes.jpg" style="width:100%"> <img class="mySlides" src="images/spaghetti.jpg" style="width:100%"> <img class="mySlides" src="images/squirrel.png" style="width:100%"> <img class="mySlides" src="images/eightball.gif" style="width:100%"></p>
-</div>
-<script>
-var slideIndex = 1;
-showDivs(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
-</script>
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-
-#myImg {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#myImg:hover {opacity: 0.7;}
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
-
-/* Modal Content (image) */
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-}
-
-/* Caption of Modal Image */
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-}
-
-/* Add Animation */
-.modal-content, #caption {    
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)} 
-    to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
-}
-
-/* The Close Button */
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-    .modal-content {
-        width: 100%;
-    }
-}
 </style>
 <h2>
-Image Modal
+jQuery SimplePagination Plugin Demo
 </h2>
-<p>
-In this example, we use CSS to create a modal (dialog box) that is hidden by default.
-</p>
-<p>
-We use JavaScript to trigger the modal and to display the current image inside the modal when it is clicked on. Also note that we use the value from the image’s “alt” attribute as an image caption text inside the modal.
-</p>
-<p><img id="myImg" src="images/grapes.jpg" alt="Trolltunga, Norway" width="300" height="200"></p>
-<!-- The Modal -->
-<div id="myModal" class="modal">
-<span class="close">×</span> <img class="modal-content" id="img01">
-<div id="caption">
-
-</div>
-</div>
+<table id="example" class="table table-striped">
+<tr>
+<td>
+<a href="fuji-apple.html">1 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">2 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">3 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">4 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">5 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">6 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">7 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">8 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">9 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">10 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">11 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">12 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">13 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">14 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">15 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">16 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">17 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">18 Willams Pride apple</a>
+</td>
+<tr>
+<td>
+<a href="fuji-apple.html">19 Fuji</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="williams-pride-apple.html">20 Willams Pride apple</a>
+</td>
+</tr>
+</table>
 <script>
-// Get the modal
-var modal = document.getElementById('myModal');
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById('myImg');
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-}
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-    modal.style.display = "none";
-}
+$("#example").simplePagination({
+// the number of rows to show per page
+perPage: 13,
+// CSS classes to custom the pagination
+containerClass: '',
+previousButtonClass: '',
+nextButtonClass: '',
+// text for next and prev buttons
+previousButtonText: 'Previous',
+nextButtonText: 'Next',
+// initial page
+currentPage: 1
+});
 </script>
 
 </div>
@@ -331,8 +277,8 @@ span.onclick = function() {
           </div>
         </div>
       </div>
-<a href="applications.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="testing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="table-paginate.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="table-paginate-with-filter.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
