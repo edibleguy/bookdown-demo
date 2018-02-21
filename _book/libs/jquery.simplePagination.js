@@ -75,7 +75,8 @@
 				$rows.slice((from-1), to).show();
 
 			//	of.innerHTML = from + ' to ' + to + ' of ' + $rows.length + ' entries';
-        of.innerHTML =  $rows.length + ' total entries';
+      //  of.innerHTML =  $rows.length + ' total entries';
+      document.getElementById("numberofpages").innerHTML = "available pages = " + $rows.length;
 
 				if ($rows.length <= settings.perPage) {
 					$(container).hide();

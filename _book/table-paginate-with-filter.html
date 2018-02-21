@@ -25,7 +25,7 @@
 <meta name="author" content="Mark Lee">
 
 
-<meta name="date" content="2018-02-19">
+<meta name="date" content="2018-02-21">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -268,6 +268,10 @@ jQuery SimplePagination Plugin Demo with filter
 </td>
 </tr>
 </table>
+<p id="numberofpages">
+&lt;&gt;
+<p id="stuff">
+<p>
 <script>
 $("#example").simplePagination({
 // the number of rows to show per page
@@ -285,7 +289,8 @@ currentPage: 1
 </script>
 <script>
 function myFunction() {
-  var input, filter, table, tr, td, i;
+  var input, filter, table, tr, td, i,j;
+  j=0;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
   table = document.getElementById("example");
@@ -295,11 +300,13 @@ function myFunction() {
     if (td) {
       if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
         tr[i].style.display = "";
+        j=j+1
       } else {
         tr[i].style.display = "none";
       }
     }       
   }
+  document.getElementById("stuff").innerHTML = "number of pages returned = "+j;
 }
 </script>
 
