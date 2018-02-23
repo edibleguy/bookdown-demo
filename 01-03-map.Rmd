@@ -1,0 +1,36 @@
+# map
+
+from: http://kartograph.org/docs/kartograph.js/
+
+<script type="text/javascript" src="http://kartograph.org/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="http://kartograph.org/js/raphael-2.1.0.min.js"></script>
+<script type="text/javascript" src="http://kartograph.org/js/kartograph.min.js"></script>
+<style type="text/css">
+body { font-family: Helvetica, Arial }
+</style>
+<script type="text/javascript">//<![CDATA[
+window.onload=function(){
+var svgUrl = 'http://kartograph.org/showcase/usa-projection/usa.svg',
+    opts = { padding: 30 };
+kartograph.map('#map').loadMap(svgUrl, mapLoaded, opts);
+function mapLoaded(map) {
+map.addLayer('layer0', {
+styles: {
+stroke: '#aaa',
+fill: '#f6f4f2'
+},
+mouseenter: function(d, path) {
+path.attr('fill', Math.random() < 0.5 ? '#c04' : '#04c');
+},
+mouseleave: function(d, path) {
+path.animate({ fill: '#f6f4f2' }, 1000);
+}
+});
+}
+}//]]> 
+</script>
+<div id="map" class="kartograph" style="position: relative; height: 700.982px;">
+
+</div>
+  
+

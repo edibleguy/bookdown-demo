@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="dinner.html">
-<link rel="next" href="applications.html">
+<link rel="prev" href="datatable.html">
+<link rel="next" href="intro.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -159,22 +159,48 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="going-to-sleep" class="section level2">
-<h2><span class="header-section-number">7.5</span> Going to sleep</h2>
-<ul>
-<li>Get in bed</li>
-<li>Count sheep</li>
-</ul>
+<div id="map" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> map</h1>
+<p>from: <a href="http://kartograph.org/docs/kartograph.js/" class="uri">http://kartograph.org/docs/kartograph.js/</a></p>
+<script type="text/javascript" src="http://kartograph.org/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="http://kartograph.org/js/raphael-2.1.0.min.js"></script>
+<script type="text/javascript" src="http://kartograph.org/js/kartograph.min.js"></script>
+<style type="text/css">
+body { font-family: Helvetica, Arial }
+</style>
+<script type="text/javascript">//<![CDATA[
+window.onload=function(){
+var svgUrl = 'http://kartograph.org/showcase/usa-projection/usa.svg',
+    opts = { padding: 30 };
+kartograph.map('#map').loadMap(svgUrl, mapLoaded, opts);
+function mapLoaded(map) {
+map.addLayer('layer0', {
+styles: {
+stroke: '#aaa',
+fill: '#f6f4f2'
+},
+mouseenter: function(d, path) {
+path.attr('fill', Math.random() < 0.5 ? '#c04' : '#04c');
+},
+mouseleave: function(d, path) {
+path.animate({ fill: '#f6f4f2' }, 1000);
+}
+});
+}
+}//]]> 
+</script>
+<div id="map" class="kartograph" style="position: relative; height: 700.982px;">
 
 </div>
-<!-- </div> -->
+
+</div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="dinner.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="applications.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="datatable.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="intro.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
