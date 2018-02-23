@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="breakfast.html">
-<link rel="next" href="going-to-sleep.html">
+<link rel="prev" href="jquery-practice.html">
+<link rel="next" href="intro.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -105,7 +105,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
 <li class="chapter" data-level="2" data-path="jquery-practice.html"><a href="jquery-practice.html"><i class="fa fa-check"></i><b>2</b> jquery practice</a></li>
-<li class="chapter" data-level="3" data-path="datatable.html"><a href="datatable.html"><i class="fa fa-check"></i><b>3</b> datatable</a></li>
+<li class="chapter" data-level="3" data-path="rmd-table.html"><a href="rmd-table.html"><i class="fa fa-check"></i><b>3</b> rmd table</a></li>
 <li class="chapter" data-level="4" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>4</b> Introduction</a></li>
 <li class="chapter" data-level="5" data-path="apples.html"><a href="apples.html"><i class="fa fa-check"></i><b>5</b> Apples</a><ul>
 <li class="chapter" data-level="5.1" data-path="fuji-apple.html"><a href="fuji-apple.html"><i class="fa fa-check"></i><b>5.1</b> Fuji Apple</a><ul>
@@ -158,25 +158,118 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="dinner" class="section level2">
-<h2><span class="header-section-number">6.4</span> Dinner</h2>
+<div id="rmd-table" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> rmd table</h1>
+<p>Several packages support making beautiful tables with R, such as</p>
 <ul>
-<li>Eat spaghetti</li>
-<li>Drink wine</li>
+<li><a href="https://cran.r-project.org/web/packages/xtable/">xtable</a></li>
+<li><a href="https://cran.r-project.org/web/packages/stargazer/">stargazer</a></li>
+<li><a href="http://rapporter.github.io/pander/">pander</a></li>
+<li><a href="https://cran.r-project.org/web/packages/tables/">tables</a></li>
+<li><a href="http://eusebe.github.io/ascii/">ascii</a></li>
+<li>etc.</li>
 </ul>
-<hr />
-<div class="figure">
-<img src="images/spaghetti.jpg" alt="picture of spaghetti" />
-<p class="caption">picture of spaghetti</p>
-</div>
+<p>It is also very easy to make tables with knitr’s <code>kable</code> function:</p>
+<table>
+<caption><span id="tab:unnamed-chunk-3">Table 3.1: </span>A knitr kable.</caption>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">mpg</th>
+<th align="right">cyl</th>
+<th align="right">disp</th>
+<th align="right">hp</th>
+<th align="right">drat</th>
+<th align="right">wt</th>
+<th align="right">qsec</th>
+<th align="right">vs</th>
+<th align="right">am</th>
+<th align="right">gear</th>
+<th align="right">carb</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mazda RX4</td>
+<td align="right">21.0</td>
+<td align="right">6</td>
+<td align="right">160</td>
+<td align="right">110</td>
+<td align="right">3.90</td>
+<td align="right">2.620</td>
+<td align="right">16.46</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">4</td>
+<td align="right">4</td>
+</tr>
+<tr class="even">
+<td>Mazda RX4 Wag</td>
+<td align="right">21.0</td>
+<td align="right">6</td>
+<td align="right">160</td>
+<td align="right">110</td>
+<td align="right">3.90</td>
+<td align="right">2.875</td>
+<td align="right">17.02</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">4</td>
+<td align="right">4</td>
+</tr>
+<tr class="odd">
+<td>Datsun 710</td>
+<td align="right">22.8</td>
+<td align="right">4</td>
+<td align="right">108</td>
+<td align="right">93</td>
+<td align="right">3.85</td>
+<td align="right">2.320</td>
+<td align="right">18.61</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">4</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td>Hornet 4 Drive</td>
+<td align="right">21.4</td>
+<td align="right">6</td>
+<td align="right">258</td>
+<td align="right">110</td>
+<td align="right">3.08</td>
+<td align="right">3.215</td>
+<td align="right">19.44</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td>Hornet Sportabout</td>
+<td align="right">18.7</td>
+<td align="right">8</td>
+<td align="right">360</td>
+<td align="right">175</td>
+<td align="right">3.15</td>
+<td align="right">3.440</td>
+<td align="right">17.02</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">2</td>
+</tr>
+</tbody>
+</table>
+
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="breakfast.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="going-to-sleep.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="jquery-practice.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="intro.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
