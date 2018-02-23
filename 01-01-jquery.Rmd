@@ -1,0 +1,116 @@
+# jquery practice
+<style type="text/css">
+th,td
+{
+width:100px;
+}
+</style>
+<script type="text/javascript">//<![CDATA[
+$(function(){
+var ProductInfo = [{
+Collection: "pear",
+Species: "Pyrus",
+Variety: "101"
+},
+{
+Collection: "apple",
+Species: "Malus",
+Variety: "x101"
+},
+{
+Collection: "apple",
+Species: "Malus",
+Variety: "<a href='adams-pearmain-apple.html'>Adams Pearmain</a>"
+},
+{
+Collection: "plum",
+Species: "Prunus",
+Variety: "100"
+},
+{
+Collection: "pear",
+Species: "Pyrus",
+Variety: "500"
+},
+{
+Collection: "2011",
+Species: "Product 6",
+Variety: "100"
+},
+{
+Collection: "2013",
+Species: "Product 7",
+Variety: "100"
+},
+{
+Collection: "2013",
+Species: "Product 8",
+Variety: "455"
+}];
+var CollectionsArray = [];
+var SpeciessArray = [];
+// adding unique Collections to CollectionsArray
+$.each(ProductInfo, function (index) {
+var Collection = ProductInfo[index].Collection;
+if ($.inArray(Collection, CollectionsArray) == -1) {
+CollectionsArray.push(Collection);
+}
+});
+//sorting the Collection  
+CollectionsArray.sort();
+var $CollectionDropDown = $("#DropDown_Collection");
+var $SpeciesDropDown = $("#DropDown_Species");
+var $container = $("#details").find("tbody");
+// append the Collections to select
+$.each(CollectionsArray, function (i) {
+$CollectionDropDown.append('<option value="' + CollectionsArray[i] + '">' + CollectionsArray[i] + '</option>');
+});
+$CollectionDropDown.change(function () {
+var selectedCollection = this.value;
+//filter based on  selected Collection.
+SpeciessArray = jQuery.grep(ProductInfo, function (product, i) {
+return product.Collection == selectedCollection;
+});
+$SpeciesDropDown.empty();
+$SpeciesDropDown.append('<option>None</option>');
+for (var i = 0; i < SpeciessArray.length; i++) {
+$SpeciesDropDown.append('<option value="' + SpeciessArray[i].Species + '">' + SpeciessArray[i].Species + '</option>');
+}
+updateTable(SpeciessArray);
+});
+$SpeciesDropDown.change(function () {
+var selectedSpecies = this.value;
+//filter select based on selected Species
+selectedArray = jQuery.grep(ProductInfo, function (product, i) {
+return product.Species == selectedSpecies;
+});
+updateTable(selectedArray);
+});
+//To update the table element with selected items
+updateTable = function (collection) {
+$container.empty();
+for (var i = 0; i < collection.length; i++) {
+$container.append("<tr><td>" + collection[i].Collection + "</td><td> " + collection[i].Species + "</td><td>" + collection[i].Variety + "</td></tr>");
+}
+}
+});//]]> 
+</script>
+<div id="DrpDwn">
+Collection:<select id="DropDown_Collection"><option></option></select>
+Species:<select id="DropDown_Species"><option></option></select>       
+</div>
+<br />
+Filtered product information
+<table id="details"  border="1" cellpadding="2" cellspacing="2">
+<thead>
+<tr>
+<th >Collection</th>
+<th>Species</th>
+<th>Variety</th>
+</tr>
+</thead> 
+<tbody></tbody>   
+</table>
+
+
+<p> from here: http://jsfiddle.net/mrrodd/JnpqY/</P>
