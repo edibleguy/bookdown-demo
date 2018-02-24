@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My Book</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook.">
+  <meta name="generator" content="bookdown 0.6 and GitBook 2.6.7">
+
+  <meta property="og:title" content="My Book" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="My Book" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Mark Lee">
+
+
+<meta name="date" content="2018-02-23">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="index.html">
+<link rel="next" href="intro.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">My Book</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
+<li class="chapter" data-level="2" data-path="sandbox.html"><a href="sandbox.html"><i class="fa fa-check"></i><b>2</b> sandbox</a></li>
+<li class="chapter" data-level="3" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>3</b> Introduction</a></li>
+<li class="chapter" data-level="4" data-path="apples.html"><a href="apples.html"><i class="fa fa-check"></i><b>4</b> Apples</a><ul>
+<li class="chapter" data-level="4.1" data-path="fuji-apple.html"><a href="fuji-apple.html"><i class="fa fa-check"></i><b>4.1</b> Fuji Apple</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="fuji-apple.html"><a href="fuji-apple.html#including-plots"><i class="fa fa-check"></i><b>4.1.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="williams-pride-apple.html"><a href="williams-pride-apple.html"><i class="fa fa-check"></i><b>4.2</b> Williams Pride Apple</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="williams-pride-apple.html"><a href="williams-pride-apple.html#including-plots-1"><i class="fa fa-check"></i><b>4.2.1</b> Including Plots</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>5</b> Methods</a><ul>
+<li class="chapter" data-level="5.1" data-path="gallery-via-links.html"><a href="gallery-via-links.html"><i class="fa fa-check"></i><b>5.1</b> Gallery via links</a></li>
+<li class="chapter" data-level="5.2" data-path="video.html"><a href="video.html"><i class="fa fa-check"></i><b>5.2</b> Video</a></li>
+<li class="chapter" data-level="5.3" data-path="breakfast.html"><a href="breakfast.html"><i class="fa fa-check"></i><b>5.3</b> Breakfast</a></li>
+<li class="chapter" data-level="5.4" data-path="dinner.html"><a href="dinner.html"><i class="fa fa-check"></i><b>5.4</b> Dinner</a></li>
+<li class="chapter" data-level="5.5" data-path="going-to-sleep.html"><a href="going-to-sleep.html"><i class="fa fa-check"></i><b>5.5</b> Going to sleep</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>6</b> Applications</a></li>
+<li class="chapter" data-level="7" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>7</b> Final Words</a></li>
+<li class="chapter" data-level="8" data-path="testing.html"><a href="testing.html"><i class="fa fa-check"></i><b>8</b> Testing</a></li>
+<li class="chapter" data-level="9" data-path="testing-2.html"><a href="testing-2.html"><i class="fa fa-check"></i><b>9</b> Testing 2</a></li>
+<li class="chapter" data-level="10" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i><b>10</b> Tables</a></li>
+<li class="chapter" data-level="11" data-path="paged-tables.html"><a href="paged-tables.html"><i class="fa fa-check"></i><b>11</b> paged tables</a></li>
+<li class="chapter" data-level="12" data-path="filter-list.html"><a href="filter-list.html"><i class="fa fa-check"></i><b>12</b> filter list</a></li>
+<li class="chapter" data-level="13" data-path="slide-show.html"><a href="slide-show.html"><i class="fa fa-check"></i><b>13</b> slide show</a></li>
+<li class="chapter" data-level="14" data-path="include-html.html"><a href="include-html.html"><i class="fa fa-check"></i><b>14</b> include html</a></li>
+<li class="chapter" data-level="15" data-path="table-paginate.html"><a href="table-paginate.html"><i class="fa fa-check"></i><b>15</b> table paginate</a></li>
+<li class="chapter" data-level="16" data-path="table-paginate-again.html"><a href="table-paginate-again.html"><i class="fa fa-check"></i><b>16</b> table paginate again</a></li>
+<li class="chapter" data-level="17" data-path="table-paginate-with-filter.html"><a href="table-paginate-with-filter.html"><i class="fa fa-check"></i><b>17</b> table paginate with filter</a></li>
+<li class="chapter" data-level="18" data-path="apple-collection.html"><a href="apple-collection.html"><i class="fa fa-check"></i><b>18</b> Apple Collection</a><ul>
+<li class="chapter" data-level="18.1" data-path="adams-pearmain-apple.html"><a href="adams-pearmain-apple.html"><i class="fa fa-check"></i><b>18.1</b> Adams Pearmain Apple</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">My Book</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="sandbox" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> sandbox</h1>
+<script src="libs/myjquery.min.js"></script>
+<script type="text/javascript">//<![CDATA[
+var visible = "";
+$('div.filter').delegate('a', 'click', function (event) {
+visible = '.' + this.href.slice(this.href.indexOf("#") + 1);
+//$('ul.items li').hide().filter(visible).show();
+pagination();
+event.preventDefault();
+});
+var itemsNumber = 6;
+var min = 0;
+var max = itemsNumber;
+function pagination(action) {
+var totalItems = $("li" + visible).length;
+if (max < totalItems) {//Stop action if max reaches more than total items 
+if (action == "next") {
+min = min + itemsNumber;
+max = max + itemsNumber;
+}
+}
+if (min > 0) {//Stop action if min reaches less than 0
+if (action == "prev") {
+min = min - itemsNumber;
+max = max - itemsNumber;
+}
+}
+$("li").hide();
+$("li" + visible).slice(min, max).show();
+}
+pagination();
+//Next
+$("#next").click(function() {
+action = "next";
+pagination(action);
+})
+//Previous
+$("#prev").click(function() {
+action = "prev";
+pagination(action);
+});//]]> 
+</script>
+<style>
+#item-wrapper {
+width:250px;   
+margin:30px 0 0 30px;
+}
+.items li {
+font-family:arial;
+font-size:13px;
+background-color:#ccc;
+margin-bottom:1px; 
+padding:5px;    
+}
+.ctrl-nav {
+background-color:#999;
+padding:5px;
+overflow:hidden;
+}
+.ctrl-nav a {
+font-family:arial;
+font-size:13px;
+padding:5px 10px;
+color:#fff;
+}
+.ctrl-nav a#prev{
+float:left;   
+}
+.ctrl-nav a#next{
+float:right;   
+}
+</style>
+<div class="filter">
+<p><a href="#category-1">category 1</a> <a href="#category-2">category 2</a></p>
+</div>
+<div id="item-wrapper">
+<ul class="items">
+<li class="category-1">
+item 1
+</li>
+<li class="category-1">
+item 2
+</li>
+<li class="category-1">
+item 3
+</li>
+<li class="category-1">
+item 4
+</li>
+<li class="category-1">
+item 5
+</li>
+<li class="category-1">
+item 6
+</li>
+<li class="category-2">
+item 7
+</li>
+<li class="category-2">
+item 8
+</li>
+<li class="category-2">
+item 9
+</li>
+<li class="category-2">
+item 10
+</li>
+<li class="category-2">
+item 11
+</li>
+<li class="category-2">
+item 12
+</li>
+<li class="category-1">
+item 13
+</li>
+<li class="category-1">
+item 14
+</li>
+<li class="category-2">
+item 15
+</li>
+</ul>
+<div class="ctrl-nav">
+<p><a href="#" id="prev">Previous</a><a href="#" id="next">Next</a></p>
+</div>
+</div>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="intro.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"download": null,
+"toc": {
+"collapse": "section"
+},
+"collaspe": "section"
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
