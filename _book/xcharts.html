@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My Book</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook.">
+  <meta name="generator" content="bookdown 0.6 and GitBook 2.6.7">
+
+  <meta property="og:title" content="My Book" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="My Book" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Mark Lee">
+
+
+<meta name="date" content="2018-02-25">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="shiny-garden-map.html">
+<link rel="next" href="intro.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">My Book</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
+<li class="chapter" data-level="2" data-path="jquery-practice.html"><a href="jquery-practice.html"><i class="fa fa-check"></i><b>2</b> jquery practice</a></li>
+<li class="chapter" data-level="3" data-path="datatable.html"><a href="datatable.html"><i class="fa fa-check"></i><b>3</b> datatable</a></li>
+<li class="chapter" data-level="4" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>4</b> map</a></li>
+<li class="chapter" data-level="5" data-path="jqplot.html"><a href="jqplot.html"><i class="fa fa-check"></i><b>5</b> jqplot</a></li>
+<li class="chapter" data-level="6" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>6</b> chartjs</a></li>
+<li class="chapter" data-level="7" data-path="shiny-garden-map.html"><a href="shiny-garden-map.html"><i class="fa fa-check"></i><b>7</b> shiny garden map</a></li>
+<li class="chapter" data-level="8" data-path="xcharts.html"><a href="xcharts.html"><i class="fa fa-check"></i><b>8</b> xcharts</a></li>
+<li class="chapter" data-level="9" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>9</b> Introduction</a></li>
+<li class="chapter" data-level="10" data-path="apples.html"><a href="apples.html"><i class="fa fa-check"></i><b>10</b> Apples</a><ul>
+<li class="chapter" data-level="10.1" data-path="fuji-apple.html"><a href="fuji-apple.html"><i class="fa fa-check"></i><b>10.1</b> Fuji Apple</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="fuji-apple.html"><a href="fuji-apple.html#including-plots"><i class="fa fa-check"></i><b>10.1.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="williams-pride-apple.html"><a href="williams-pride-apple.html"><i class="fa fa-check"></i><b>10.2</b> Williams Pride Apple</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="williams-pride-apple.html"><a href="williams-pride-apple.html#including-plots-1"><i class="fa fa-check"></i><b>10.2.1</b> Including Plots</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>11</b> Methods</a><ul>
+<li class="chapter" data-level="11.1" data-path="gallery-via-links.html"><a href="gallery-via-links.html"><i class="fa fa-check"></i><b>11.1</b> Gallery via links</a></li>
+<li class="chapter" data-level="11.2" data-path="video.html"><a href="video.html"><i class="fa fa-check"></i><b>11.2</b> Video</a></li>
+<li class="chapter" data-level="11.3" data-path="breakfast.html"><a href="breakfast.html"><i class="fa fa-check"></i><b>11.3</b> Breakfast</a></li>
+<li class="chapter" data-level="11.4" data-path="dinner.html"><a href="dinner.html"><i class="fa fa-check"></i><b>11.4</b> Dinner</a></li>
+<li class="chapter" data-level="11.5" data-path="going-to-sleep.html"><a href="going-to-sleep.html"><i class="fa fa-check"></i><b>11.5</b> Going to sleep</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>12</b> Applications</a></li>
+<li class="chapter" data-level="13" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>13</b> Final Words</a></li>
+<li class="chapter" data-level="14" data-path="testing.html"><a href="testing.html"><i class="fa fa-check"></i><b>14</b> Testing</a></li>
+<li class="chapter" data-level="15" data-path="testing-2.html"><a href="testing-2.html"><i class="fa fa-check"></i><b>15</b> Testing 2</a></li>
+<li class="chapter" data-level="16" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i><b>16</b> Tables</a></li>
+<li class="chapter" data-level="17" data-path="paged-tables.html"><a href="paged-tables.html"><i class="fa fa-check"></i><b>17</b> paged tables</a></li>
+<li class="chapter" data-level="18" data-path="filter-list.html"><a href="filter-list.html"><i class="fa fa-check"></i><b>18</b> filter list</a></li>
+<li class="chapter" data-level="19" data-path="slide-show.html"><a href="slide-show.html"><i class="fa fa-check"></i><b>19</b> slide show</a></li>
+<li class="chapter" data-level="20" data-path="include-html.html"><a href="include-html.html"><i class="fa fa-check"></i><b>20</b> include html</a></li>
+<li class="chapter" data-level="21" data-path="table-paginate.html"><a href="table-paginate.html"><i class="fa fa-check"></i><b>21</b> table paginate</a></li>
+<li class="chapter" data-level="22" data-path="table-paginate-again.html"><a href="table-paginate-again.html"><i class="fa fa-check"></i><b>22</b> table paginate again</a></li>
+<li class="chapter" data-level="23" data-path="table-paginate-with-filter.html"><a href="table-paginate-with-filter.html"><i class="fa fa-check"></i><b>23</b> table paginate with filter</a></li>
+<li class="chapter" data-level="24" data-path="apple-collection.html"><a href="apple-collection.html"><i class="fa fa-check"></i><b>24</b> Apple Collection</a><ul>
+<li class="chapter" data-level="24.1" data-path="adams-pearmain-apple.html"><a href="adams-pearmain-apple.html"><i class="fa fa-check"></i><b>24.1</b> Adams Pearmain Apple</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">My Book</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="xcharts" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> xcharts</h1>
+<article class="example">
+<pre><code>&lt;h1&gt;Interacting With Points&lt;/h1&gt;
+&lt;p&gt;Mouse over the points on the chart to see tooltips.&lt;/p&gt;
+&lt;div class=&quot;row guttered&quot;&gt;
+  &lt;div class=&quot;span5&quot;&gt;
+    &lt;figure id=&quot;example4&quot;&gt;&lt;svg height=&quot;300&quot; width=&quot;356&quot; class=&quot;xchart&quot;&gt;&lt;g transform=&quot;translate(60,0)&quot;&gt;&lt;g class=&quot;scale&quot;&gt;&lt;g class=&quot;axis axisX&quot; transform=&quot;translate(0,280)&quot;&gt;&lt;g class=&quot;tick major&quot; transform=&quot;translate(20,0)&quot; style=&quot;opacity: 1;&quot;&gt;&lt;line y2=&quot;-275&quot; x2=&quot;0&quot;&gt;&lt;/line&gt;&lt;text y=&quot;3&quot; x=&quot;0&quot; dy=&quot;.71em&quot; style=&quot;text-anchor: middle;&quot;&gt;Monday&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick major&quot; transform=&quot;translate(84,0)&quot; style=&quot;opacity: 1;&quot;&gt;&lt;line y2=&quot;-275&quot; x2=&quot;0&quot;&gt;&lt;/line&gt;&lt;text y=&quot;3&quot; x=&quot;0&quot; dy=&quot;.71em&quot; style=&quot;text-anchor: middle;&quot;&gt;Tuesday&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick major&quot; transform=&quot;translate(148,0)&quot; style=&quot;opacity: 1;&quot;&gt;&lt;line y2=&quot;-275&quot; x2=&quot;0&quot;&gt;&lt;/line&gt;&lt;text y=&quot;3&quot; x=&quot;0&quot; dy=&quot;.71em&quot; style=&quot;text-anchor: middle;&quot;&gt;Thursday&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick major&quot; transform=&quot;translate(212,0)&quot; style=&quot;opacity: 1;&quot;&gt;&lt;line y2=&quot;-275&quot; x2=&quot;0&quot;&gt;&lt;/line&gt;&lt;text y=&quot;3&quot; x=&quot;0&quot; dy=&quot;.71em&quot; style=&quot;text-anchor: middle;&quot;&gt;Friday&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick major&quot; transform=&quot;translate(276,0)&quot; style=&quot;opacity: 1;&quot;&gt;&lt;line y2=&quot;-275&quot; x2=&quot;0&quot;&gt;&lt;/line&gt;&lt;text y=&quot;3&quot; x=&quot;0&quot; dy=&quot;.71em&quot; style=&quot;text-anchor: middle;&quot;&gt;Sunday&lt;/text&gt;&lt;/g&gt;&lt;path class=&quot;domain&quot; d=&quot;M20,-275V0H276V-275&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g class=&quot;axis axisY&quot; transform=&quot;translate(0,0)&quot;&gt;&lt;g class=&quot;tick major&quot; transform=&quot;translate(0,275)&quot; style=&quot;opacity: 1;&quot;&gt;&lt;line x2=&quot;296&quot; y2=&quot;0&quot;&gt;&lt;/line&gt;&lt;text x=&quot;-3&quot; dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; y=&quot;0&quot;&gt;2&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick major&quot; transform=&quot;translate(0,241)&quot; style=&quot;opacity: 1;&quot;&gt;&lt;line x2=&quot;296&quot; y2=&quot;0&quot;&gt;&lt;/line&gt;&lt;text x=&quot;-3&quot; dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; y=&quot;0&quot;&gt;3&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick major&quot; transform=&quot;translate(0,206)&quot; style=&quot;opacity: 1;&quot;&gt;&lt;line x2=&quot;296&quot; y2=&quot;0&quot;&gt;&lt;/line&gt;&lt;text x=&quot;-3&quot; dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; y=&quot;0&quot;&gt;4&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick major&quot; transform=&quot;translate(0,172)&quot; style=&quot;opacity: 1;&quot;&gt;&lt;line x2=&quot;296&quot; y2=&quot;0&quot;&gt;&lt;/line&gt;&lt;text x=&quot;-3&quot; dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; y=&quot;0&quot;&gt;5&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick major&quot; transform=&quot;translate(0,138)&quot; style=&quot;opacity: 1;&quot;&gt;&lt;line x2=&quot;296&quot; y2=&quot;0&quot;&gt;&lt;/line&gt;&lt;text x=&quot;-3&quot; dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; y=&quot;0&quot;&gt;6&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick major&quot; transform=&quot;translate(0,103)&quot; style=&quot;opacity: 1;&quot;&gt;&lt;line x2=&quot;296&quot; y2=&quot;0&quot;&gt;&lt;/line&gt;&lt;text x=&quot;-3&quot; dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; y=&quot;0&quot;&gt;7&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick major&quot; transform=&quot;translate(0,69)&quot; style=&quot;opacity: 1;&quot;&gt;&lt;line x2=&quot;296&quot; y2=&quot;0&quot;&gt;&lt;/line&gt;&lt;text x=&quot;-3&quot; dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; y=&quot;0&quot;&gt;8&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick major&quot; transform=&quot;translate(0,34)&quot; style=&quot;opacity: 1;&quot;&gt;&lt;line x2=&quot;296&quot; y2=&quot;0&quot;&gt;&lt;/line&gt;&lt;text x=&quot;-3&quot; dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; y=&quot;0&quot;&gt;9&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick major&quot; transform=&quot;translate(0,0)&quot; style=&quot;opacity: 1;&quot;&gt;&lt;line x2=&quot;296&quot; y2=&quot;0&quot;&gt;&lt;/line&gt;&lt;text x=&quot;-3&quot; dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; y=&quot;0&quot;&gt;10&lt;/text&gt;&lt;/g&gt;&lt;path class=&quot;domain&quot; d=&quot;M296,0H0V275H296&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g class=&quot;axisZero&quot;&gt;&lt;line x1=&quot;0&quot; x2=&quot;416&quot; y1=&quot;275&quot; y2=&quot;275&quot;&gt;&lt;/line&gt;&lt;/g&gt;&lt;/g&gt;&lt;g data-index=&quot;3&quot; class=&quot; main pizza line     color0&quot;&gt;&lt;path class=&quot;fill&quot; d=&quot;M20,275C27.11111111111111,275,48.44444444444445,275,62.66666666666667,275S91.11111111111111,275,105.33333333333334,275S133.77777777777777,275,148,275S176.44444444444446,275,190.66666666666669,275S219.11111111111111,275,233.33333333333334,275S268.8888888888889,275,276,275L276,138C274.9755518039142,135.50290752204089,242.031888241833,27.068339057289336,233.33333333333334,34S193.39568701374367,200.39953736104465,190.66666666666669,206S152.99948395705894,247.79035580782315,148,241S111.12196158721682,75.98705519707029,105.33333333333334,69S76.8888888888889,138,62.66666666666667,138S27.11111111111111,138,20,138Z&quot; style=&quot;opacity: 1;&quot;&gt;&lt;/path&gt;&lt;path class=&quot;line&quot; d=&quot;M20,138C27.11111111111111,138,48.44444444444445,138,62.66666666666667,138S99.54470507944987,62.01294480292971,105.33333333333334,69S143.00051604294106,234.20964419217685,148,241S187.9376463195897,211.60046263895535,190.66666666666669,206S224.63477842483368,40.931660942710664,233.33333333333334,34S274.9755518039142,135.50290752204089,276,138&quot; style=&quot;opacity: 1;&quot;&gt;&lt;/path&gt;&lt;circle cx=&quot;20&quot; cy=&quot;138&quot; r=&quot;5&quot; style=&quot;opacity: 1;&quot;&gt;&lt;/circle&gt;&lt;circle cx=&quot;62.66666666666667&quot; cy=&quot;138&quot; r=&quot;5&quot; style=&quot;opacity: 1;&quot;&gt;&lt;/circle&gt;&lt;circle cx=&quot;105.33333333333334&quot; cy=&quot;69&quot; r=&quot;5&quot; style=&quot;opacity: 1;&quot;&gt;&lt;/circle&gt;&lt;circle cx=&quot;148&quot; cy=&quot;241&quot; r=&quot;5&quot; style=&quot;opacity: 1;&quot;&gt;&lt;/circle&gt;&lt;circle cx=&quot;190.66666666666669&quot; cy=&quot;206&quot; r=&quot;5&quot; style=&quot;opacity: 1;&quot;&gt;&lt;/circle&gt;&lt;circle cx=&quot;233.33333333333334&quot; cy=&quot;34&quot; r=&quot;5&quot; style=&quot;opacity: 1;&quot;&gt;&lt;/circle&gt;&lt;circle cx=&quot;276&quot; cy=&quot;138&quot; r=&quot;5&quot; style=&quot;opacity: 1;&quot;&gt;&lt;/circle&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/figure&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;span7&quot;&gt;
+    &lt;pre&gt;&lt;code data-language=&quot;javascript&quot; class=&quot;rainbow&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; tt &lt;span class=&quot;keyword operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;support&quot;&gt;document&lt;/span&gt;.&lt;span class=&quot;function call&quot;&gt;createElement&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;div&#39;&lt;/span&gt;),</code></pre>
+<p>leftOffset <span class="keyword operator">=</span> <span class="keyword operator">-</span>(~~<span class="math inline">\((&lt;span class=&quot;string&quot;&gt;&#39;html&#39;&lt;/span&gt;).&lt;span class=&quot;function call&quot;&gt;css&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;padding-left&#39;&lt;/span&gt;).&lt;span class=&quot;function call&quot;&gt;replace&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;px&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;) &lt;span class=&quot;keyword operator&quot;&gt;+&lt;/span&gt; ~~\)</span>(<span class="string">‘body’</span>).<span class="function call">css</span>(<span class="string">‘margin-left’</span>).<span class="function call">replace</span>(<span class="string">‘px’</span>, <span class="string">’’</span>)), topOffset <span class="keyword operator">=</span> <span class="keyword operator">-</span><span class="constant numeric">32</span>; tt.className <span class="keyword operator">=</span> <span class="string">‘ex-tooltip’</span>; <span class="support">document</span>.body.<span class="function call">appendChild</span>(tt);</p>
+<p><span class="keyword">var</span> data <span class="keyword operator">=</span> { <span class="string">“xScale”</span>: <span class="string">“time”</span>, <span class="string">“yScale”</span>: <span class="string">“linear”</span>, <span class="string">“main”</span>: [ { <span class="string">“className”</span>: <span class="string">“.pizza”</span>, <span class="string">“data”</span>: [ { <span class="string">“x”</span>: <span class="string">“2012-11-05”</span>, <span class="string">“y”</span>: <span class="constant numeric">6</span> }, { <span class="string">“x”</span>: <span class="string">“2012-11-06”</span>, <span class="string">“y”</span>: <span class="constant numeric">6</span> }, { <span class="string">“x”</span>: <span class="string">“2012-11-07”</span>, <span class="string">“y”</span>: <span class="constant numeric">8</span> }, { <span class="string">“x”</span>: <span class="string">“2012-11-08”</span>, <span class="string">“y”</span>: <span class="constant numeric">3</span> }, { <span class="string">“x”</span>: <span class="string">“2012-11-09”</span>, <span class="string">“y”</span>: <span class="constant numeric">4</span> }, { <span class="string">“x”</span>: <span class="string">“2012-11-10”</span>, <span class="string">“y”</span>: <span class="constant numeric">9</span> }, { <span class="string">“x”</span>: <span class="string">“2012-11-11”</span>, <span class="string">“y”</span>: <span class="constant numeric">6</span> } ] } ] }; <span class="keyword">var</span> opts <span class="keyword operator">=</span> { <span class="string">“dataFormatX”</span>: <span class="storage function">function</span> (x) { <span class="keyword">return</span> d3.time.<span class="function call">format</span>(<span class="string">‘%Y-%m-%d’</span>).<span class="function call">parse</span>(x); }, <span class="string">“tickFormatX”</span>: <span class="storage function">function</span> (x) { <span class="keyword">return</span> d3.time.<span class="function call">format</span>(<span class="string">‘%A’</span>)(x); }, <span class="string">“mouseover”</span>: <span class="storage function">function</span> (d, i) { <span class="keyword">var</span> pos <span class="keyword operator">=</span><span class="selector"> $</span>(<span class="keyword">this</span>).<span class="function call">offset</span>(); <span class="selector"> $</span>(tt).<span class="function call">text</span>(d3.time.<span class="function call">format</span>(<span class="string">‘%A’</span>)(d.x) <span class="keyword operator">+</span> <span class="string">‘:’</span> <span class="keyword operator">+</span> d.y) .<span class="function call">css</span>({top: topOffset <span class="keyword operator">+</span> pos.top, left: pos.left <span class="keyword operator">+</span> leftOffset}) .<span class="function call">show</span>(); }, <span class="string">“mouseout”</span>: <span class="storage function">function</span> (x) { <span class="selector"> <span class="math inline">\(&lt;/span&gt;(tt).&lt;span class=&quot;function call&quot;&gt;hide&lt;/span&gt;();  } }; &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; myChart &lt;span class=&quot;keyword operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;entity function&quot;&gt;xChart&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;line-dotted&#39;&lt;/span&gt;, data, &lt;span class=&quot;string&quot;&gt;&#39;#example4&#39;&lt;/span&gt;, opts);&lt;/code&gt;&lt;/pre&gt;  &lt;/div&gt;  &lt;/div&gt;  &lt;script&gt;  (function () {  var tt = document.createElement(&#39;div&#39;),  leftOffset = -(~~\)</span>(‘html’).css(‘padding-left’).replace(‘px’, ‘’) + ~~$(’body’).css(‘margin-left’).replace(‘px’, ‘’)), topOffset = -32; tt.className = ’ex-tooltip’; document.body.appendChild(tt);</p>
+<pre><code>  var data = {</code></pre>
+<p>“xScale”: “time”, “yScale”: “linear”, “main”: [ { “className”: “.pizza”, “data”: [ { “x”: “2012-11-05”, “y”: 6 }, { “x”: “2012-11-06”, “y”: 6 }, { “x”: “2012-11-07”, “y”: 8 }, { “x”: “2012-11-08”, “y”: 3 }, { “x”: “2012-11-09”, “y”: 4 }, { “x”: “2012-11-10”, “y”: 9 }, { “x”: “2012-11-11”, “y”: 6 } ] } ] }; var opts = { “dataFormatX”: function (x) { return d3.time.format(‘%Y-%m-%d’).parse(x); }, “tickFormatX”: function (x) { return d3.time.format(‘%A’)(x); }, “mouseover”: function (d, i) { var pos = $(this).offset(); $(tt).text(d3.time.format(‘%A’)(d.x) + ‘:’ + d.y) .css({top: topOffset + pos.top, left: pos.left + leftOffset}) .show(); }, “mouseout”: function (x) { $(tt).hide(); } };</p>
+<pre><code>  var myChart = new xChart(&#39;line-dotted&#39;, data, &#39;#example4&#39;, opts);
+  
+}());
+&lt;/script&gt;</code></pre>
+</article>
+<script src="libs/d3.min.js"></script>
+<script src="libs/xcharts.min.js"></script>
+<script src="libs/rainbow.min.js"></script>
+<script>
+(function () {
+var tt = document.createElement('div'),
+leftOffset = -(~~$('html').css('padding-left').replace('px', '') + ~~$('body').css('margin-left').replace('px', '')),
+topOffset = -32;
+tt.className = 'ex-tooltip';
+document.body.appendChild(tt);
+
+var data = {
+"xScale": "time",
+"yScale": "linear",
+"main": [
+{
+"className": ".pizza",
+"data": [
+{
+"x": "2012-11-05",
+"y": 6
+},
+{
+"x": "2012-11-06",
+"y": 6
+},
+{
+"x": "2012-11-07",
+"y": 8
+},
+{
+"x": "2012-11-08",
+"y": 3
+},
+{
+"x": "2012-11-09",
+"y": 4
+},
+{
+"x": "2012-11-10",
+"y": 9
+},
+{
+"x": "2012-11-11",
+"y": 6
+}
+]
+}
+]
+};
+var opts = {
+"dataFormatX": function (x) { return d3.time.format('%Y-%m-%d').parse(x); },
+"tickFormatX": function (x) { return d3.time.format('%A')(x); },
+"mouseover": function (d, i) {
+var pos = $(this).offset();
+$(tt).text(d3.time.format('%A')(d.x) + ': ' + d.y)
+.css({top: topOffset + pos.top, left: pos.left + leftOffset})
+.show();
+},
+"mouseout": function (x) {
+$(tt).hide();
+}
+};
+
+var myChart = new xChart('line-dotted', data, '#example4', opts);
+
+}());
+</script>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="shiny-garden-map.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="intro.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"download": null,
+"toc": {
+"collapse": "section"
+},
+"collaspe": "section"
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
