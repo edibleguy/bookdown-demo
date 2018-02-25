@@ -2,16 +2,8 @@
 
 <script src="libs/Chart.bundle.js"></script>
 <script src="libs/utils.js"></script>
-<style>
-canvas {
--moz-user-select: none;
--webkit-user-select: none;
--ms-user-select: none;
-}
-</style>
-</head>
 
-<body>
+
 <div style="width:75%">
 <canvas id="canvas"></canvas>
 </div>
