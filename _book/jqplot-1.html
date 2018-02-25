@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="williams-pride-apple.html">
-<link rel="next" href="gallery-via-links.html">
+<link rel="prev" href="jqplot.html">
+<link rel="next" href="shiny-garden-map.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -108,7 +108,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="3" data-path="datatable.html"><a href="datatable.html"><i class="fa fa-check"></i><b>3</b> datatable</a></li>
 <li class="chapter" data-level="4" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>4</b> map</a></li>
 <li class="chapter" data-level="5" data-path="jqplot.html"><a href="jqplot.html"><i class="fa fa-check"></i><b>5</b> jqplot</a></li>
-<li class="chapter" data-level="6" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>6</b> chartjs</a></li>
+<li class="chapter" data-level="6" data-path="jqplot-1.html"><a href="jqplot-1.html"><i class="fa fa-check"></i><b>6</b> jqplot</a></li>
 <li class="chapter" data-level="7" data-path="shiny-garden-map.html"><a href="shiny-garden-map.html"><i class="fa fa-check"></i><b>7</b> shiny garden map</a></li>
 <li class="chapter" data-level="8" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>8</b> Introduction</a></li>
 <li class="chapter" data-level="9" data-path="apples.html"><a href="apples.html"><i class="fa fa-check"></i><b>9</b> Apples</a><ul>
@@ -162,17 +162,118 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="methods" class="section level1">
-<h1><span class="header-section-number">Chapter 10</span> Methods</h1>
-<p>We describe our methods in this chapter.</p> 
+<div id="jqplot-1" class="section level1">
+<h1><span class="header-section-number">Chapter 6</span> jqplot</h1>
+<script src="../../../../dist/2.7.1/Chart.bundle.js"></script>
+<script src="../../utils.js"></script>
+<style>
+canvas {
+-moz-user-select: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+}
+</style>
+</head>
+<body>
+<div style="width:75%">
+<canvas id="canvas">
+</canvas>
+</div>
+<button id="randomizeData">
+Randomize Data
+</button>
+<script>
+var color = Chart.helpers.color;
+var scatterChartData = {
+datasets: [{
+label: "My First dataset",
+borderColor: window.chartColors.red,
+backgroundColor: color(window.chartColors.red).alpha(0.2).rgbString(),
+data: [{
+x: randomScalingFactor(),
+y: randomScalingFactor(),
+}, {
+x: randomScalingFactor(),
+y: randomScalingFactor(),
+}, {
+x: randomScalingFactor(),
+y: randomScalingFactor(),
+}, {
+x: randomScalingFactor(),
+y: randomScalingFactor(),
+}, {
+x: randomScalingFactor(),
+y: randomScalingFactor(),
+}, {
+x: randomScalingFactor(),
+y: randomScalingFactor(),
+}, {
+x: randomScalingFactor(),
+y: randomScalingFactor(),
+}]
+}, {
+label: "My Second dataset",
+borderColor: window.chartColors.blue,
+backgroundColor: color(window.chartColors.blue).alpha(0.2).rgbString(),
+data: [{
+x: randomScalingFactor(),
+y: randomScalingFactor(),
+}, {
+x: randomScalingFactor(),
+y: randomScalingFactor(),
+}, {
+x: randomScalingFactor(),
+y: randomScalingFactor(),
+}, {
+x: randomScalingFactor(),
+y: randomScalingFactor(),
+}, {
+x: randomScalingFactor(),
+y: randomScalingFactor(),
+}, {
+x: randomScalingFactor(),
+y: randomScalingFactor(),
+}, {
+x: randomScalingFactor(),
+y: randomScalingFactor(),
+}]
+}]
+};
+
+window.onload = function() {
+var ctx = document.getElementById("canvas").getContext("2d");
+window.myScatter = Chart.Scatter(ctx, {
+data: scatterChartData,
+options: {
+title: {
+display: true,
+text: 'Chart.js Scatter Chart'
+},
+}
+});
+};
+
+document.getElementById('randomizeData').addEventListener('click', function() {
+scatterChartData.datasets.forEach(function(dataset) {
+dataset.data = dataset.data.map(function() {
+return {
+x: randomScalingFactor(),
+y: randomScalingFactor()
+};
+});
+});
+window.myScatter.update();
+});
+</script>
+
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="williams-pride-apple.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="gallery-via-links.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="jqplot.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="shiny-garden-map.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
