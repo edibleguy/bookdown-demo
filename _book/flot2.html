@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="shiny-garden-map.html">
-<link rel="next" href="flot2-1.html">
+<link rel="prev" href="flot3.html">
+<link rel="next" href="flot4.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -110,9 +110,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5" data-path="jqplot.html"><a href="jqplot.html"><i class="fa fa-check"></i><b>5</b> jqplot</a></li>
 <li class="chapter" data-level="6" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>6</b> chartjs</a></li>
 <li class="chapter" data-level="7" data-path="shiny-garden-map.html"><a href="shiny-garden-map.html"><i class="fa fa-check"></i><b>7</b> shiny garden map</a></li>
-<li class="chapter" data-level="8" data-path="flot2.html"><a href="flot2.html"><i class="fa fa-check"></i><b>8</b> flot2</a></li>
-<li class="chapter" data-level="9" data-path="flot2-1.html"><a href="flot2-1.html"><i class="fa fa-check"></i><b>9</b> flot2</a></li>
-<li class="chapter" data-level="10" data-path="flot2-2.html"><a href="flot2-2.html"><i class="fa fa-check"></i><b>10</b> flot2</a></li>
+<li class="chapter" data-level="8" data-path="flot3.html"><a href="flot3.html"><i class="fa fa-check"></i><b>8</b> flot3</a></li>
+<li class="chapter" data-level="9" data-path="flot2.html"><a href="flot2.html"><i class="fa fa-check"></i><b>9</b> flot2</a></li>
+<li class="chapter" data-level="10" data-path="flot4.html"><a href="flot4.html"><i class="fa fa-check"></i><b>10</b> flot4</a></li>
 <li class="chapter" data-level="11" data-path="flot.html"><a href="flot.html"><i class="fa fa-check"></i><b>11</b> flot</a></li>
 <li class="chapter" data-level="12" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>12</b> Introduction</a></li>
 <li class="chapter" data-level="13" data-path="apples.html"><a href="apples.html"><i class="fa fa-check"></i><b>13</b> Apples</a><ul>
@@ -167,29 +167,26 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="flot2" class="section level1">
-<h1><span class="header-section-number">Chapter 8</span> flot2</h1>
+<h1><span class="header-section-number">Chapter 9</span> flot2</h1>
 <p><link href="libs/examples.css" rel="stylesheet" type="text/css"></p>
 <script language="javascript" type="text/javascript" src="libs/jquery.flot.js"></script>
 <script language="javascript" type="text/javascript" src="libs/jquery.flot.resize.js"></script>
 <script language="javascript" type="text/javascript" src="libs/jquery-ui.min.js"></script>
+<div id="header">
 <h2>
-Interactivity
+Resizing
 </h2>
-<div id="placeholder" class="demo-placeholder" style="width:80%;height:40%;">
-<blockquote>
 </div>
-</blockquote>
-<p>
-One of the goals of Flot is to support user interactions. Try pointing and clicking on the points.
+<div id="placeholder" class="demo-placeholder" style="width:50%;height:100px;">
+
+</div>
+<p class="message">
 </p>
 <p>
-<label><input id="enablePosition" type="checkbox" checked="checked"></input>Show mouse position</label> <span id="hoverdata"></span> <span id="clickdata"></span>
+Sometimes it makes more sense to just let the plot take up the available space. In that case, we need to redraw the plot each time the placeholder changes its size. If you include the resize plugin, this is handled automatically.
 </p>
 <p>
-A tooltip is easy to build with a bit of jQuery code and the data returned from the plot.
-</p>
-<p>
-<label><input id="enableTooltip" type="checkbox" checked="checked"></input>Enable tooltip</label>
+Drag the bottom and right sides of the plot to resize it.
 </p>
 <div id="footer">
 <p>Copyright © 2007 - 2014 IOLA and Ole Laursen</p>
@@ -198,71 +195,31 @@ A tooltip is easy to build with a bit of jQuery code and the data returned from 
 
 $(function() {
 
-var sin = [],
-cos = [];
-
+var d1 = [];
 for (var i = 0; i < 14; i += 0.5) {
-sin.push([i, Math.sin(i)]);
-cos.push([i, Math.cos(i)]);
+d1.push([i, Math.sin(i)]);
 }
 
-var plot = $.plot("#placeholder", [
-{ data: sin},
-{ data: cos}
-], {
-series: {
-lines: {
-show: true
-},
-points: {
-show: true
-}
-},
-grid: {
-hoverable: true,
-clickable: true
-},
-yaxis: {
-min: -1.2,
-max: 1.2
-}
+var d2 = [[0, 3], [4, 8], [8, 5], [9, 13]];
+var d3 = [[0, 12], [7, 12], null, [7, 2.5], [12, 2.5]];
+
+var placeholder = $("#placeholder");
+var plot = $.plot(placeholder, [d1, d2, d3]);
+
+// The plugin includes a jQuery plugin for adding resize events to any
+// element.Add a callback so we can display the placeholder size.
+
+placeholder.resize(function () {
+$(".message").text("Placeholder is now "
++ $(this).width() + "x" + $(this).height()
++ " pixels");
 });
 
-$("<div id='tooltip'></div>").css({
-position: "absolute",
-display: "none",
-border: "1px solid #fdd",
-padding: "2px",
-"background-color": "#fee",
-opacity: 0.80
-}).appendTo("body");
-
-$("#placeholder").bind("plothover", function (event, pos, item) {
-
-if ($("#enablePosition:checked").length > 0) {
-var str = "(" + pos.x.toFixed(2) + ", " + pos.y.toFixed(2) + ")";
-$("#hoverdata").text(str);
-}
-
-if ($("#enableTooltip:checked").length > 0) {
-if (item) {
-var x = item.datapoint[0].toFixed(2),
-y = item.datapoint[1].toFixed(2);
-
-$("#tooltip").html(item.series.label + " of " + x + " = " + y)
-.css({top: item.pageY+5, left: item.pageX+5})
-.fadeIn(200);
-} else {
-$("#tooltip").hide();
-}
-}
-});
-
-$("#placeholder").bind("plotclick", function (event, pos, item) {
-if (item) {
-$("#clickdata").text(" - click point " + item.dataIndex + " in " + item.series.label);
-plot.highlight(item.series, item.datapoint);
-}
+$(".demo-container").resizable({
+maxWidth: 300,
+maxHeight: 500,
+minWidth: 150,
+minHeight: 150
 });
 
 // Add the Flot version string to the footer
@@ -278,8 +235,8 @@ $("#footer").prepend("Flot " + $.plot.version + " &ndash; ");
           </div>
         </div>
       </div>
-<a href="shiny-garden-map.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="flot2-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="flot3.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="flot4.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

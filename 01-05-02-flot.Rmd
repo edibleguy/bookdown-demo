@@ -1,4 +1,4 @@
-# flot2
+# flot3
 
 <link href="libs/examples.css" rel="stylesheet" type="text/css">
 
