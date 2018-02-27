@@ -1,0 +1,83 @@
+# flot9
+
+<link href="libs/examples.css" rel="stylesheet" type="text/css">
+
+<script language="javascript" type="text/javascript" src="libs/jquery.flot.js"></script>
+
+<script type="text/javascript" src="libs/jquery.flot.JUMlib.js"></script>
+<script type="text/javascript" src="libs/jquery.flot.spider.js"></script>
+
+<title>Flot Spider Example by SpartakusMd</title>
+
+<script type="text/javascript">//<![CDATA[
+$(window).on('load', function() {
+var chart_labels = [
+{label: "Actionnariat"},
+{label: "Dirigeant"},
+{label: "Marketing & commercial"},
+{label: "Achats & production"},
+{label: "Environnement"},
+{label: "Administratif"},
+{label: "Propriété intellectuelle"},
+{label: "Ressources humaines"},
+{label: "Ma valeur ajoutée"}
+];
+
+var chart_data = [{
+color: "#FF7500",
+data: [
+[0, 5.00],
+[0, 3.71],
+[0, 3.08],
+[0, 3.44],
+[0, 3.67],
+[0, 2.71],
+[0, 3.00],
+[0, 4.47],
+[0, 3.08]
+],
+spider: {show: true}
+}];
+
+var options = {
+series:{
+spider: {
+active: true,
+highlight: {
+mode: "area"
+},
+legs: {
+data: chart_labels,
+legScaleMax: 0,
+legScaleMin: 0,
+legStartAngle: 0,
+font: "10px Monaco, 'Andale Mono', 'Lucida Console', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace"
+},
+legMin: 0,
+legMax: 5,
+spiderSize: 0.6,
+scaleMode: "static",
+connection: { width: 2 },
+pointSize: 3,
+lineWidth: 1
+}
+},
+grid: {
+hoverable: true,
+clickable: true,
+tickColor: "rgba(0,0,0,0.2)",
+mode: "spider"
+}
+};
+
+var p = $.plot($("#demo-survey-result"), chart_data, options);
+});//]]> 
+
+</script>
+
+
+<div id="demo-survey-result" style="width: 500px; height: 300px; border: 1px solid rgb(240, 240, 240); padding: 0px; position: relative;">
+<canvas class="flot-base" width="500" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 500px; height: 300px;"></canvas>
+<canvas class="flot-overlay" width="500" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 500px; height: 300px;"></canvas>
+</div>
+

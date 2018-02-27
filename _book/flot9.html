@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="table-paginate.html">
-<link rel="next" href="table-paginate-with-filter.html">
+<link rel="prev" href="flot8.html">
+<link rel="next" href="flot.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -169,123 +169,86 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="table-paginate-again" class="section level1">
-<h1><span class="header-section-number">Chapter 28</span> table paginate again</h1>
-<script src="libs/jquery.simplePagination.js"></script>
-<style>
+<div id="flot9" class="section level1">
+<h1><span class="header-section-number">Chapter 13</span> flot9</h1>
+<p><link href="libs/examples.css" rel="stylesheet" type="text/css"></p>
+<script language="javascript" type="text/javascript" src="libs/jquery.flot.js"></script>
+<script type="text/javascript" src="libs/jquery.flot.JUMlib.js"></script>
+<script type="text/javascript" src="libs/jquery.flot.spider.js"></script>
+<title>
+Flot Spider Example by SpartakusMd
+</title>
+<script type="text/javascript">//<![CDATA[
+$(window).on('load', function() {
+var chart_labels = [
+{label: "Actionnariat"},
+{label: "Dirigeant"},
+{label: "Marketing & commercial"},
+{label: "Achats & production"},
+{label: "Environnement"},
+{label: "Administratif"},
+{label: "Propriété intellectuelle"},
+{label: "Ressources humaines"},
+{label: "Ma valeur ajoutée"}
+];
 
-</style>
-<h2>
-jQuery SimplePagination Plugin Demo
-</h2>
-<table id="example" class="table table-striped">
-<tr>
-<td>
-<a href="fuji-apple.html">1 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">2 Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">3 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">4 Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">5 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">6 Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">7 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">8 Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">9 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">10 Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">11 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">12 Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">13 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">14 Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">15 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">16 Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">17 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">18 Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">19 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">20 Willams Pride apple</a>
-</td>
-</tr>
-</table>
-<script>
-$("#example").simplePagination({
-// the number of rows to show per page
-perPage: 13,
-// CSS classes to custom the pagination
-containerClass: '',
-previousButtonClass: '',
-nextButtonClass: '',
-// text for next and prev buttons
-previousButtonText: 'Previous',
-nextButtonText: 'Next',
-// initial page
-currentPage: 1
-});
+var chart_data = [{
+color: "#FF7500",
+data: [
+[0, 5.00],
+[0, 3.71],
+[0, 3.08],
+[0, 3.44],
+[0, 3.67],
+[0, 2.71],
+[0, 3.00],
+[0, 4.47],
+[0, 3.08]
+],
+spider: {show: true}
+}];
+
+var options = {
+series:{
+spider: {
+active: true,
+highlight: {
+mode: "area"
+},
+legs: {
+data: chart_labels,
+legScaleMax: 0,
+legScaleMin: 0,
+legStartAngle: 0,
+font: "10px Monaco, 'Andale Mono', 'Lucida Console', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace"
+},
+legMin: 0,
+legMax: 5,
+spiderSize: 0.6,
+scaleMode: "static",
+connection: { width: 2 },
+pointSize: 3,
+lineWidth: 1
+}
+},
+grid: {
+hoverable: true,
+clickable: true,
+tickColor: "rgba(0,0,0,0.2)",
+mode: "spider"
+}
+};
+
+var p = $.plot($("#demo-survey-result"), chart_data, options);
+});//]]> 
+
 </script>
+<div id="demo-survey-result" style="width: 500px; height: 300px; border: 1px solid rgb(240, 240, 240); padding: 0px; position: relative;">
+<canvas class="flot-base" width="500" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 500px; height: 300px;">
+</canvas>
+<canvas class="flot-overlay" width="500" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 500px; height: 300px;">
+</canvas>
+</div>
 
 </div>
             </section>
@@ -293,8 +256,8 @@ currentPage: 1
           </div>
         </div>
       </div>
-<a href="table-paginate.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="table-paginate-with-filter.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="flot8.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="flot.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="table-paginate.html">
-<link rel="next" href="table-paginate-with-filter.html">
+<link rel="prev" href="flot6.html">
+<link rel="next" href="flot9.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -169,122 +169,103 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="table-paginate-again" class="section level1">
-<h1><span class="header-section-number">Chapter 28</span> table paginate again</h1>
-<script src="libs/jquery.simplePagination.js"></script>
-<style>
-
-</style>
+<div id="flot8" class="section level1">
+<h1><span class="header-section-number">Chapter 12</span> flot8</h1>
+<p><link href="libs/examples.css" rel="stylesheet" type="text/css"></p>
+<script language="javascript" type="text/javascript" src="libs/jquery.flot.js"></script>
+<div id="header">
 <h2>
-jQuery SimplePagination Plugin Demo
+Image Plots
 </h2>
-<table id="example" class="table table-striped">
-<tr>
-<td>
-<a href="fuji-apple.html">1 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">2 Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">3 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">4 Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">5 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">6 Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">7 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">8 Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">9 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">10 Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">11 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">12 Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">13 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">14 Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">15 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">16 Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">17 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">18 Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">19 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">20 Willams Pride apple</a>
-</td>
-</tr>
-</table>
-<script>
-$("#example").simplePagination({
-// the number of rows to show per page
-perPage: 13,
-// CSS classes to custom the pagination
-containerClass: '',
-previousButtonClass: '',
-nextButtonClass: '',
-// text for next and prev buttons
-previousButtonText: 'Previous',
-nextButtonText: 'Next',
-// initial page
-currentPage: 1
+</div>
+<div id="content">
+
+<div class="demo-container" style="width:600px;height:600px;">
+<div id="placeholder" class="demo-placeholder" style="padding: 0px; position: relative;">
+<canvas class="flot-base" width="568" height="563" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 568px; height: 563px;">
+</canvas>
+<div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);">
+<div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;">
+<div class="flot-tick-label tickLabel" style="position: absolute; max-width: 81px; top: 545px; left: 376px; text-align: center;">
+0
+</div>
+<div class="flot-tick-label tickLabel" style="position: absolute; max-width: 81px; top: 545px; left: 466px; text-align: center;">
+2
+</div>
+<div class="flot-tick-label tickLabel" style="position: absolute; max-width: 81px; top: 545px; left: 557px; text-align: center;">
+4
+</div>
+<div class="flot-tick-label tickLabel" style="position: absolute; max-width: 81px; top: 545px; left: 12px; text-align: center;">
+-8
+</div>
+<div class="flot-tick-label tickLabel" style="position: absolute; max-width: 81px; top: 545px; left: 103px; text-align: center;">
+-6
+</div>
+<div class="flot-tick-label tickLabel" style="position: absolute; max-width: 81px; top: 545px; left: 193px; text-align: center;">
+-4
+</div>
+<div class="flot-tick-label tickLabel" style="position: absolute; max-width: 81px; top: 545px; left: 284px; text-align: center;">
+-2
+</div>
+</div>
+<div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;">
+<div class="flot-tick-label tickLabel" style="position: absolute; top: 177px; left: 5px; text-align: right;">
+0
+</div>
+<div class="flot-tick-label tickLabel" style="position: absolute; top: 89px; left: 5px; text-align: right;">
+2
+</div>
+<div class="flot-tick-label tickLabel" style="position: absolute; top: 0px; left: 5px; text-align: right;">
+4
+</div>
+<div class="flot-tick-label tickLabel" style="position: absolute; top: 532px; left: 2px; text-align: right;">
+-8
+</div>
+<div class="flot-tick-label tickLabel" style="position: absolute; top: 443px; left: 2px; text-align: right;">
+-6
+</div>
+<div class="flot-tick-label tickLabel" style="position: absolute; top: 355px; left: 2px; text-align: right;">
+-4
+</div>
+<div class="flot-tick-label tickLabel" style="position: absolute; top: 266px; left: 2px; text-align: right;">
+-2
+</div>
+</div>
+</div>
+<canvas class="flot-overlay" width="568" height="563" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 568px; height: 563px;">
+</canvas>
+</div>
+</div>
+<script type="text/javascript">
+
+$(function() {
+
+
+
+var data = [ 
+{ data: [["bookdown-demo_files/figure-html/nice-fig-1.png", -36627, -72447, 35374, 109983]],
+images: {show: true}, bars: {show: false}, points: {show: false}, lines: {show: false}},
+{ data: [[-36627, 35374 ], [-72447, 109983]]], 
+images: {show: false}, bars: {show: false}, points: {show: false}, lines: {show: true}}
+];
+
+var options = {
+series: { images: { show: true } },
+xaxis: { min: -36627, max: 35374 },
+yaxis: { min: -72447, max: 109983 },
+lines: { show: true },
+grid: { hoverable: true, clickable: true },
+};
+
+var graph = $.plot.image.loadDataImages(data, options, function () {
+$.plot($("#graphPosition"), data, options);
 });
+
+// Add the Flot version string to the footer
+
+$("#footer").prepend("Flot " + $.plot.version + " &ndash; ");
+});
+
 </script>
 
 </div>
@@ -293,8 +274,8 @@ currentPage: 1
           </div>
         </div>
       </div>
-<a href="table-paginate.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="table-paginate-with-filter.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="flot6.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="flot9.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
