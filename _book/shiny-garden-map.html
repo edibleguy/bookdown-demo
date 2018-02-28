@@ -180,19 +180,19 @@ ui &lt;-<span class="st"> </span><span class="kw">basicPage</span>(
   <span class="kw">verbatimTextOutput</span>(<span class="st">&quot;info&quot;</span>)
 )
 
-server &lt;-<span class="st"> </span>function(input, output) {
-  output$plot1 &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({
-    <span class="kw">plot</span>(mtcars$wt, mtcars$mpg)
+server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output) {
+  output<span class="op">$</span>plot1 &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({
+    <span class="kw">plot</span>(mtcars<span class="op">$</span>wt, mtcars<span class="op">$</span>mpg)
   })
 
-  output$info &lt;-<span class="st"> </span><span class="kw">renderText</span>({
-    <span class="kw">paste0</span>(<span class="st">&quot;x=&quot;</span>, input$plot_click$x, <span class="st">&quot;</span><span class="ch">\n</span><span class="st">y=&quot;</span>, input$plot_click$y)
+  output<span class="op">$</span>info &lt;-<span class="st"> </span><span class="kw">renderText</span>({
+    <span class="kw">paste0</span>(<span class="st">&quot;x=&quot;</span>, input<span class="op">$</span>plot_click<span class="op">$</span>x, <span class="st">&quot;</span><span class="ch">\n</span><span class="st">y=&quot;</span>, input<span class="op">$</span>plot_click<span class="op">$</span>y)
   })
 }
 
 <span class="kw">shinyApp</span>(ui, server)</code></pre></div>
 <div style="width: 100% ; height: 400px ; text-align: center; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;" class="muted well">Shiny applications not supported in static R Markdown documents</div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">knitr::<span class="kw">include_app</span>(<span class="st">&quot;https://yihui.shinyapps.io/miniUI/&quot;</span>, 
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">knitr<span class="op">::</span><span class="kw">include_app</span>(<span class="st">&quot;https://yihui.shinyapps.io/miniUI/&quot;</span>, 
   <span class="dt">height =</span> <span class="st">&quot;600px&quot;</span>)</code></pre></div>
 <iframe src="https://yihui.shinyapps.io/miniUI/?showcase=0" width="672" height="600px">
 </iframe>
