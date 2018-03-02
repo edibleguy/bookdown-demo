@@ -17,7 +17,8 @@
 //the next time the function is called.
 
 var sum = 0;
-var numbers = [65, 44, 12, 4];
+var numbers = [65, 44, 12, 4,123];
+var words = ["first","abc","middle","xyz","last"]
 var index1 = 0;
 
 
@@ -29,13 +30,14 @@ function myFunction(item) {
 var computerScore = document.getElementById('computerScore');
 
 function rps() {
-    console.log(computerScore.dataset.value);
+computerScore.innerHTML = computerScore.dataset.value;
+note.innerHTML = words[computerScore.dataset.value];
+
 computerScore.dataset.value++;
 if (computerScore.dataset.value==numbers.length){
 computerScore.dataset.value=0;
 }
-computerScore.innerHTML = computerScore.dataset.value;
-note.innerHTML = numbers[computerScore.dataset.value];
+
 }
 </script>
 
