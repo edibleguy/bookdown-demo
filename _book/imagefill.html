@@ -25,15 +25,15 @@
 <meta name="author" content="Mark Lee">
 
 
-<meta name="date" content="2018-03-02">
+<meta name="date" content="2018-03-01">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="include-html.html">
-<link rel="next" href="table-paginate-again.html">
+<link rel="prev" href="flot10.html">
+<link rel="next" href="flot.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -117,7 +117,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="12" data-path="flot8.html"><a href="flot8.html"><i class="fa fa-check"></i><b>12</b> flot8</a></li>
 <li class="chapter" data-level="13" data-path="flot9.html"><a href="flot9.html"><i class="fa fa-check"></i><b>13</b> flot9</a></li>
 <li class="chapter" data-level="14" data-path="flot10.html"><a href="flot10.html"><i class="fa fa-check"></i><b>14</b> flot10</a></li>
-<li class="chapter" data-level="15" data-path="button1.html"><a href="button1.html"><i class="fa fa-check"></i><b>15</b> button1</a></li>
+<li class="chapter" data-level="15" data-path="imagefill.html"><a href="imagefill.html"><i class="fa fa-check"></i><b>15</b> imagefill</a></li>
 <li class="chapter" data-level="16" data-path="flot.html"><a href="flot.html"><i class="fa fa-check"></i><b>16</b> flot</a></li>
 <li class="chapter" data-level="17" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>17</b> Introduction</a></li>
 <li class="chapter" data-level="18" data-path="apples.html"><a href="apples.html"><i class="fa fa-check"></i><b>18</b> Apples</a><ul>
@@ -171,142 +171,107 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="table-paginate" class="section level1">
-<h1><span class="header-section-number">Chapter 29</span> table paginate</h1>
-<script src="libs/jquery-paginate.js"></script>
-<style>
-.page-navigation a {
-      margin: 0 2px;
-      display: inline-block;
-      padding: 3px 5px;
-      color: #ffffff;
-      background-color: #70b7ec;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+<div id="imagefill" class="section level1">
+<h1><span class="header-section-number">Chapter 15</span> imagefill</h1>
+<p><link href="https://fonts.googleapis.com/css?family=Patua+One" rel='stylesheet' type='text/css'> <!--<link rel="stylesheet" href="css/main.css">--></p>
+<div class="packery clearfix">
+<div class="gutter-sizer">
 
-.page-navigation a[data-selected] {
-    background-color: #3d9be0;
-    }
-</style>
-<h2>
-Table Paginate
-</h2>
-<table id='myTable'>
-<tr>
-<td>
-<a href="fuji-apple.html">1 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">2 Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">3 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">4 Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">5 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">6 Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">7 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">8 Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">9 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">10 Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">11 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">12 Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">13 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">14 Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">15 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">16 Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">17 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">18 Willams Pride apple</a>
-</td>
-<tr>
-<td>
-<a href="fuji-apple.html">19 Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">20 Willams Pride apple</a>
-</td>
-</tr>
-</table>
+</div>
+<div class="grid-sizer">
+
+</div>
+<div class="item w2">
+<p><img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" alt="Octocat Github Mascot"></p>
+</div>
+<div class="item">
+<p><img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" alt="Octocat Github Mascot"></p>
+</div>
+<div class="item w2 h2">
+<p><img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" alt="Octocat Github Mascot"></p>
+</div>
+<div class="item">
+<p><img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" alt="Octocat Github Mascot"></p>
+</div>
+<div class="item w2">
+<p><img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" alt="Octocat Github Mascot"></p>
+</div>
+<div class="item">
+<p><img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" alt="Octocat Github Mascot"></p>
+</div>
+<div class="item h2">
+<p><img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" alt="Octocat Github Mascot"></p>
+</div>
+<div class="item">
+<p><img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" alt="Octocat Github Mascot"></p>
+</div>
+<div class="item h2">
+<p><img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" alt="Octocat Github Mascot"></p>
+</div>
+<div class="item">
+<p><img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" alt="Octocat Github Mascot"></p>
+</div>
+<div class="item">
+<p><img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" alt="Octocat Github Mascot"></p>
+</div>
+<div class="item">
+<p><img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" alt="Octocat Github Mascot"></p>
+</div>
+<div class="item h2">
+<p><img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" alt="Octocat Github Mascot"></p>
+</div>
+<div class="item">
+<p><img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" alt="Octocat Github Mascot"></p>
+</div>
+<div class="item">
+<p><img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" alt="Octocat Github Mascot"></p>
+</div>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/2.1.0/jquery.imagesloaded.min.js"></script>
+<script src="https://packery.metafizzy.co/packery.pkgd.min.js"></script>
+<script src="js/jquery-imagefill.js"></script>
 <script>
-//from here wikiti-random-stuff.gitlab.io/jquery-paginate
-  // this has a bug. if limit=6 and N=20, then only 1-18 are displayed
-  // fixed it with these lines (% is the remainder function)
-  //    _totalPages: function() {
-  //      if (this._totalRows()% this.options.limit >0){
-  //        return Math.floor(this._totalRows()/ this.options.limit)+1;
-  //      }
-  //      else {
-  //        return Math.floor(this._totalRows()/ this.options.limit);
-  //      }
-  //    }
+// http://packery.metafizzy.co/packery.pkgd.js added as external resource
 
+$( function() {
+var $container = $('.packery').packery({
+itemSelector: '.item',
+columnWidth: 150,
+gutter: 20,
+// disable resize
+isResizeBound: false
+});
 
-  // Paginate it
-  $('#myTable').paginate({
-    limit: 14,
-    onSelect: function(obj, page) {
-      console.log('Page ' + page + ' selected!' );
-    }
-  });
+var pckry = $container.data('packery');
+
+var gutter = pckry.options.gutter || 0;
+var columnWidth = pckry.options.columnWidth + gutter;
+
+function onResize() {
+var outsideSize = getSize( $container.parent()[0] ).innerWidth;
+var cols = Math.floor( outsideSize / ( columnWidth ) );
+// set container width to columns
+$container.width( cols * columnWidth - gutter )
+// manually trigger layout
+$container.packery();
+// run imagefill inside the resize event, using runOnce
+$('.item').imagefill({runOnce:true});
+}
+
+// debounce resize event
+var resizeTimeout;
+$( window ).on( 'resize', function() {
+if ( resizeTimeout ) {
+clearTimeout( resizeTimeout );
+}
+resizeTimeout = setTimeout( onResize, 100 );
+})
+
+// initial trigger 
+onResize();
+
+});
+
 </script>
 
 </div>
@@ -315,8 +280,8 @@ Table Paginate
           </div>
         </div>
       </div>
-<a href="include-html.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="table-paginate-again.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="flot10.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="flot.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

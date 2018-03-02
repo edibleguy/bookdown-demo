@@ -1,0 +1,41 @@
+# button1
+
+
+<p>Click the button to get the sum of the numbers in the array.</p>
+<button onclick="numbers.forEach(myFunction)">Try it</button>
+
+<p>Sum of numbers in array: <span id="demo"></span></p>
+<p>note: <span id="note"></span></p>
+
+<b>computer score:</b><p id="computerScore" data-value="0">-</p>
+<button type="button" onclick="rps()">Go</button><br>
+
+<script>
+//var values are initialized when loaded
+//they are global and persist until window is reloaded
+//if incremented inside a function, the value is remembered
+//the next time the function is called.
+
+var sum = 0;
+var numbers = [65, 44, 12, 4];
+var index1 = 0;
+
+
+function myFunction(item) {
+    sum += item;
+    demo.innerHTML = sum;
+}
+
+var computerScore = document.getElementById('computerScore');
+
+function rps() {
+    console.log(computerScore.dataset.value);
+computerScore.dataset.value++;
+if (computerScore.dataset.value==numbers.length){
+computerScore.dataset.value=0;
+}
+computerScore.innerHTML = computerScore.dataset.value;
+note.innerHTML = numbers[computerScore.dataset.value];
+}
+</script>
+
