@@ -1,0 +1,40 @@
+# flot11
+
+<link href="libs/examples.css" rel="stylesheet" type="text/css">
+
+<script language="javascript" type="text/javascript" src="libs/jquery.flot.js"></script>
+
+<div id="gardenmap" style="width:300px;height:200px;overflow: hidden;"></div>
+
+<button id="button1"> ReDraw </button>
+
+<script>
+window.clickedPoints = [];
+
+var plantxy = [];
+for (var i = 0; i < 5; i++){
+plantxy.push([i,Math.random() * 10]);
+}
+
+
+var opts = {grid:{clickable: true}};
+
+plot = $.plot("#gardenmap", [ plantxy ], opts);
+
+$("#gardenmap").bind("plotclick", function (event, pos, item) {
+if (item) {
+plot.highlight(item.series, item.datapoint);
+window.clickedPoints.push(item.datapoint);
+}
+});
+
+$('#button1').click(function(){
+window.clickedPoints = [];
+var sdata = plot.getData();
+sdata[0].data.push([sdata[0].data.length, Math.random()*10]);
+plot.setData(sdata);
+plot.setupGrid()
+plot.draw();
+});
+
+</script>

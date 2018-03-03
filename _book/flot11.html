@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="flot10.html">
-<link rel="next" href="flot11.html">
+<link rel="prev" href="button1.html">
+<link rel="next" href="flot.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -172,57 +172,45 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="button1" class="section level1">
-<h1><span class="header-section-number">Chapter 15</span> button1</h1>
-<p>
-Click the button to get the sum of the numbers in the array.
-</p>
-<button onclick="numbers.forEach(myFunction)">
-Try it
+<div id="flot11" class="section level1">
+<h1><span class="header-section-number">Chapter 16</span> flot11</h1>
+<p><link href="libs/examples.css" rel="stylesheet" type="text/css"></p>
+<script language="javascript" type="text/javascript" src="libs/jquery.flot.js"></script>
+<div id="gardenmap" style="width:300px;height:200px;overflow: hidden;">
+
+</div>
+<button id="button1">
+ReDraw
 </button>
-<p>
-Sum of numbers in array: <span id="demo"></span>
-</p>
-<p>
-note: <span id="note"></span>
-</p>
-<b>computer score:</b>
-<p id="computerScore" data-value="0">
--
-</p>
-<button type="button" onclick="rps()">
-Go
-</button>
-<p><br></p>
 <script>
-//var values are initialized when loaded
-//they are global and persist until window is reloaded
-//if incremented inside a function, the value is remembered
-//the next time the function is called.
+window.clickedPoints = [];
 
-var sum = 0;
-var numbers = [65, 44, 12, 4,123];
-var words = ["first","abc","middle","xyz","last"]
-var index1 = 0;
-
-
-function myFunction(item) {
-    sum += item;
-    demo.innerHTML = sum;
+var plantxy = [];
+for (var i = 0; i < 5; i++){
+plantxy.push([i,Math.random() * 10]);
 }
 
-var computerScore = document.getElementById('computerScore');
 
-function rps() {
-computerScore.innerHTML = computerScore.dataset.value;
-note.innerHTML = words[computerScore.dataset.value];
+var opts = {grid:{clickable: true}};
 
-computerScore.dataset.value++;
-if (computerScore.dataset.value==numbers.length){
-computerScore.dataset.value=0;
+plot = $.plot("#gardenmap", [ plantxy ], opts);
+
+$("#gardenmap").bind("plotclick", function (event, pos, item) {
+if (item) {
+plot.highlight(item.series, item.datapoint);
+window.clickedPoints.push(item.datapoint);
 }
+});
 
-}
+$('#button1').click(function(){
+window.clickedPoints = [];
+var sdata = plot.getData();
+sdata[0].data.push([sdata[0].data.length, Math.random()*10]);
+plot.setData(sdata);
+plot.setupGrid()
+plot.draw();
+});
+
 </script>
 
 </div>
@@ -231,8 +219,8 @@ computerScore.dataset.value=0;
           </div>
         </div>
       </div>
-<a href="flot10.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="flot11.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="button1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="flot.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
