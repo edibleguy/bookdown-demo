@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="testing-2.html">
-<link rel="next" href="paged-tables.html">
+<link rel="prev" href="flot12.html">
+<link rel="next" href="flot.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -174,109 +174,181 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="tables" class="section level1">
-<h1><span class="header-section-number">Chapter 27</span> Tables</h1>
-<p>table goes here.</p>
+<div id="flot13" class="section level1">
+<h1><span class="header-section-number">Chapter 18</span> flot13</h1>
+<link href="libs/examples.css" rel="stylesheet" type="text/css">
+<script language="javascript" type="text/javascript" src="libs/jquery.flot.js"></script>
 <style>
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+.hidehouse {display:none}
+
+#graph {
+    float: left;
 }
 
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
+#placeholder {
+    width: 500px; 
+    height: 300px;
 }
 
-tr:nth-child(even) {
-    background-color: #dddddd;
+#miniature {
+    float: left; 
+    margin-left: 20px; 
+    margin-top: 50px;
 }
-</style>
-<h2>
-Apples
-</h2>
-<table>
-<tr>
-<td>
-<a href="fuji-apple.html">Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">Willams Pride apple</a>
-</td>
-</tr>
-</table>
-<h2>
-Two Columns
-</h2>
-<table>
-<tr>
-<td>
-Malus domestica
-</td>
-<td>
-<a href="fuji-apple.html">Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-Malus domestica
-</td>
-<td>
-<a href="williams-pride-apple.html">Willams Pride apple</a>
-</td>
-</tr>
-</table>
-<h2>
-Sort Testing
-</h2>
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
-<style>
-#myInput {
-    background-image: url('images/searchicon.png'); /* Add a search icon to input */
-    background-position: 0px 0px; /* Position the search icon */
-    background-repeat: no-repeat; /* Do not repeat the icon image */
-    width: 100%; /* Full-width */
-    font-size: 16px; /* Increase font-size */
-    padding: 12px 20px 12px 40px; /* Add some padding */
-    border: 1px solid #ddd; /* Add a grey border */
-    margin-bottom: 12px; /* Add some space below the input */
+
+#overviewLegend {
+    margin-left: 10px;
 }
+
+#overviewLegend li > div {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+#overviewLegend li label {
+    margin-left: 3px;
+}
+
 </style>
+<div id="graph">
+<div id="placeholder">
+
+</div>
+</div>
+<div id="miniature">
+<ul id="overviewLegend" style="list-style-type:none">
+</ul>
+</div>
 <script>
-function myFunction() {
-  var input, filter, table, tr, td, i;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }       
-  }
+var results = [
+{
+    "label": "house",
+    "lines": {show: true},
+    "points": {show: false},
+    "data": [[3, 2], [6,2], [6,4], [3,4], [3,2]]},
+{
+    "label": "apple1",
+    "data": [[1, 1], [2,3], [4,2], [5,3]]},
+{
+    "label": "apple2",
+    "data": [[0,0], [2,4], [3,3]]}];
+
+var options = {
+    legend: {
+        show: false
+    },
+    series: {
+        points: {
+            show: true
+        },
+        lines: {
+            show: false
+        }
+    },
+    grid: {
+        hoverable: true
+    },
+    xaxis: {
+        mode: "",
+        minTickSize: [1, "day"],
+        max: 10
+    },
+    yaxis: {
+        mode: "money",
+        min: 0,
+        tickDecimals: 2,
+        tickFormatter: function(v, axis) {
+            return "" + v.toFixed(axis.tickDecimals)
+        }
+
+    }
+};
+
+var i = 0,
+    choiceContainer = $("#overviewLegend");
+
+$.each(results, function(key, val) {
+    val.color = i;
+    ++i;
+    l = val.label;
+    var li = $('<li />').appendTo(choiceContainer);
+    
+    if (i==1){
+    $('<input class="hidehouse" name="' + l + '" id="' + l + '" type="checkbox" checked="checked" />').appendTo(li);
+    }
+    else {
+    $('<input name="' + l + '" id="' + l + '" type="checkbox" checked="checked" />').appendTo(li);
+    }
+    if (i==1){
+
+    }
+    else{
+        $('<label>', {
+        text: l, 
+        'for': l
+    }).appendTo(li);
+    }
+});
+
+function plotAccordingToChoices() {
+    var data = [];
+
+    choiceContainer.find("input:checked").each(function() {
+        var key = this.name;
+
+        for (var i = 0; i < results.length; i++) {
+            if (results[i].label === key) {
+                data.push(results[i]);
+                return true;
+            }
+        }
+    });
+    
+    $.plot($("#placeholder"), data, options);
 }
+
+var previousPoint = null;
+
+$("#placeholder").bind("plothover", function(event, pos, item) {
+    $("#x").text(pos.x.toFixed(2));
+    $("#y").text(pos.y.toFixed(2));
+
+    if (item) {
+        if (previousPoint != item.datapoint) {
+            previousPoint = item.datapoint;
+
+            $("#tooltip").remove();
+            var x = item.datapoint[0].toFixed(2),
+                y = item.datapoint[1].toFixed(2);
+
+            showTooltip(item.pageX, item.pageY, item.series.label + " $" + y);
+        }
+    } else {
+        $("#tooltip").remove();
+        previousPoint = null;
+    }
+});
+
+function showTooltip(x, y, contents) {
+    $('<div id="tooltip">' + contents + '</div>').css({
+        position: 'absolute',
+        display: 'none',
+        top: y + 5,
+        left: x + 15,
+        border: '1px solid #fdd',
+        padding: '2px',
+        backgroundColor: '#fee',
+        opacity: 0.80
+    }).appendTo("body").fadeIn(200);
+}
+
+plotAccordingToChoices();
+choiceContainer.find("input").change(plotAccordingToChoices);
+
+$('.legendColorBox > div').each(function(i){
+    $(this).clone().prependTo(choiceContainer.find("li").eq(i));
+});
 </script>
-<table id="myTable">
-<tr>
-<td>
-<a href="fuji-apple.html">Fuji</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="williams-pride-apple.html">Willams Pride</a>
-</td>
-</tr>
-</table>
 
 </div>
             </section>
@@ -284,8 +356,8 @@ function myFunction() {
           </div>
         </div>
       </div>
-<a href="testing-2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="paged-tables.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="flot12.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="flot.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

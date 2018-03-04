@@ -1,0 +1,177 @@
+# flot13
+
+<link href="libs/examples.css" rel="stylesheet" type="text/css">
+<script language="javascript" type="text/javascript" src="libs/jquery.flot.js"></script>
+
+<style>
+.hidehouse {display:none}
+
+#graph {
+    float: left;
+}
+
+#placeholder {
+    width: 500px; 
+    height: 300px;
+}
+
+#miniature {
+    float: left; 
+    margin-left: 20px; 
+    margin-top: 50px;
+}
+
+#overviewLegend {
+    margin-left: 10px;
+}
+
+#overviewLegend li > div {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+#overviewLegend li label {
+    margin-left: 3px;
+}
+
+</style>
+
+<div id="graph">
+<div id="placeholder"></div>
+</div>
+<div id="miniature">
+<ul id="overviewLegend" style="list-style-type:none">
+</ul>
+</div>
+
+
+<script>
+var results = [
+{
+    "label": "house",
+    "lines": {show: true},
+    "points": {show: false},
+    "data": [[3, 2], [6,2], [6,4], [3,4], [3,2]]},
+{
+    "label": "apple1",
+    "data": [[1, 1], [2,3], [4,2], [5,3]]},
+{
+    "label": "apple2",
+    "data": [[0,0], [2,4], [3,3]]}];
+
+var options = {
+    legend: {
+        show: false
+    },
+    series: {
+        points: {
+            show: true
+        },
+        lines: {
+            show: false
+        }
+    },
+    grid: {
+        hoverable: true
+    },
+    xaxis: {
+        mode: "",
+        minTickSize: [1, "day"],
+        max: 10
+    },
+    yaxis: {
+        mode: "money",
+        min: 0,
+        tickDecimals: 2,
+        tickFormatter: function(v, axis) {
+            return "" + v.toFixed(axis.tickDecimals)
+        }
+
+    }
+};
+
+var i = 0,
+    choiceContainer = $("#overviewLegend");
+
+$.each(results, function(key, val) {
+    val.color = i;
+    ++i;
+    l = val.label;
+    var li = $('<li />').appendTo(choiceContainer);
+    
+    if (i==1){
+    $('<input class="hidehouse" name="' + l + '" id="' + l + '" type="checkbox" checked="checked" />').appendTo(li);
+    }
+    else {
+    $('<input name="' + l + '" id="' + l + '" type="checkbox" checked="checked" />').appendTo(li);
+    }
+    if (i==1){
+
+    }
+    else{
+        $('<label>', {
+        text: l, 
+        'for': l
+    }).appendTo(li);
+    }
+});
+
+function plotAccordingToChoices() {
+    var data = [];
+
+    choiceContainer.find("input:checked").each(function() {
+        var key = this.name;
+
+        for (var i = 0; i < results.length; i++) {
+            if (results[i].label === key) {
+                data.push(results[i]);
+                return true;
+            }
+        }
+    });
+    
+    $.plot($("#placeholder"), data, options);
+}
+
+var previousPoint = null;
+
+$("#placeholder").bind("plothover", function(event, pos, item) {
+    $("#x").text(pos.x.toFixed(2));
+    $("#y").text(pos.y.toFixed(2));
+
+    if (item) {
+        if (previousPoint != item.datapoint) {
+            previousPoint = item.datapoint;
+
+            $("#tooltip").remove();
+            var x = item.datapoint[0].toFixed(2),
+                y = item.datapoint[1].toFixed(2);
+
+            showTooltip(item.pageX, item.pageY, item.series.label + " $" + y);
+        }
+    } else {
+        $("#tooltip").remove();
+        previousPoint = null;
+    }
+});
+
+function showTooltip(x, y, contents) {
+    $('<div id="tooltip">' + contents + '</div>').css({
+        position: 'absolute',
+        display: 'none',
+        top: y + 5,
+        left: x + 15,
+        border: '1px solid #fdd',
+        padding: '2px',
+        backgroundColor: '#fee',
+        opacity: 0.80
+    }).appendTo("body").fadeIn(200);
+}
+
+plotAccordingToChoices();
+choiceContainer.find("input").change(plotAccordingToChoices);
+
+$('.legendColorBox > div').each(function(i){
+    $(this).clone().prependTo(choiceContainer.find("li").eq(i));
+});
+</script>
